@@ -246,3 +246,98 @@ img{max-width:100%;display:block}
  body.print-agenda main>section:not(#aturcara){display:none!important}body.print-agenda .agenda-section{background:#fff!important;color:#000!important; padding:0!important}body.print-agenda .section-title,body.print-agenda .agenda-main h3,body.print-agenda .agenda-time{color:#000!important}body.print-agenda .section-title i,body.print-agenda .section-eyebrow,body.print-agenda .section-heading-aside span,body.print-agenda .agenda-main .agenda-kicker{color:#333!important}body.print-agenda .agenda-main p,body.print-agenda .agenda-speaker{color:#444!important}body.print-agenda .agenda-toolbar,body.print-agenda .agenda-note,body.print-agenda .inline-button,body.print-agenda .agenda-arrow{display:none!important}body.print-agenda .agenda-item{break-inside:avoid;border-bottom:1px solid #bbb!important;padding:11px 0!important}body.print-agenda .agenda-list{margin-top:20px}body.print-agenda .container{width:100%}body.print-agenda .section-heading-row{gap:15px}body.print-agenda .agenda-item.is-sesi{border-left:0!important}body.print-agenda .section-title{font-size:48px!important;margin-top:20px}body.print-agenda .agenda-main h3{font-size:17px!important}body.print-agenda .agenda-time{font-size:20px!important}
 }
 @media (max-width:350px){.contact-layout h2{font-size:51px}.contact-layout h2 i{letter-spacing:-.1em}}
+
+
+/* === V2 HERO + BRAND OVERRIDES === */
+.brand{gap:14px;min-width:0;max-width:530px}
+.brand-type{gap:4px}
+.brand-type strong{letter-spacing:-.02em;font-size:17px;font-weight:860;line-height:1.04}
+.brand-type small{font-size:10px;letter-spacing:.18em;color:#c4cbc2;font-weight:760}
+.desktop-nav a{font-weight:760;font-size:14px;letter-spacing:.01em}
+.header-actions{margin-left:16px}
+.hero-topline,.hero-overline{display:none}
+.hero-title{max-width:900px;margin:82px 0 18px;font-size:clamp(46px,6.1vw,96px);line-height:.94;letter-spacing:-.07em}
+.hero-title em{font-style:normal;font-weight:560;letter-spacing:-.04em}
+.hero-message{font-size:clamp(24px,2.2vw,34px);line-height:1.12;letter-spacing:-.03em;font-weight:780;text-transform:uppercase;color:#f2f4ef;max-width:760px}
+.hero-desc{color:#c1c8bf;font-size:16px;max-width:720px;line-height:1.7;margin:18px 0 30px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.button{padding:18px 22px;gap:20px;font-size:11px;letter-spacing:.11em;min-height:54px}
+.button-outline{background:rgba(255,255,255,.02)}
+.button-outline:hover{background:white;color:var(--dark)}
+.meta-cell strong{font-size:18px}
+
+/* Neural visual */
+.neural-art{position:absolute;z-index:1;width:760px;height:760px;right:-120px;top:10px;pointer-events:none;opacity:.98;filter:drop-shadow(0 0 55px rgba(180,255,110,.08))}
+.neural-art::before{content:"";position:absolute;inset:62px;border-radius:50%;background:radial-gradient(circle at 50% 50%, rgba(205,255,155,.12), rgba(181,255,103,.03) 22%, transparent 56%),radial-gradient(circle at 48% 44%, rgba(218,255,119,.14), transparent 12%),linear-gradient(180deg, rgba(218,255,119,.04), transparent 68%)}
+.neural-core{position:absolute;inset:50%;transform:translate(-50%,-50%);width:190px;height:190px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;background:radial-gradient(circle at 50% 42%, rgba(218,255,119,.22), rgba(218,255,119,.08) 38%, rgba(8,10,8,.16) 80%);border:1px solid rgba(218,255,119,.52);box-shadow:0 0 65px rgba(218,255,119,.12), inset 0 0 50px rgba(218,255,119,.08)}
+.neural-core span{font-size:72px;font-weight:760;letter-spacing:-.08em;color:var(--lime);line-height:.9}
+.neural-core small{margin-top:10px;font-size:11px;letter-spacing:.34em;color:#e0f7b9}
+.neural-ring{position:absolute;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);border:1px solid rgba(218,255,119,.2)}
+.neural-ring.ring-a{width:260px;height:260px;animation:neuralPulse 5s ease-in-out infinite}
+.neural-ring.ring-b{width:420px;height:420px;border-style:dashed;opacity:.8;animation:spinSlow 18s linear infinite}
+.neural-ring.ring-c{width:620px;height:620px;opacity:.7;animation:spinReverse 28s linear infinite}
+.neural-grid{position:absolute;inset:0;animation:floatNeural 8s ease-in-out infinite}
+.neural-node,.neural-line{position:absolute;display:block}
+.neural-node{width:12px;height:12px;border-radius:50%;background:var(--lime);box-shadow:0 0 18px rgba(218,255,119,.42)}
+.neural-line{height:2px;background:linear-gradient(90deg, rgba(218,255,119,0), rgba(218,255,119,.75), rgba(218,255,119,0));transform-origin:left center;opacity:.75}
+.n1{left:18%;top:24%}.n2{left:31%;top:48%}.n3{left:20%;top:72%}.n4{left:49%;top:18%}.n5{left:50%;top:82%}.n6{left:69%;top:36%}.n7{left:76%;top:58%}.n8{left:84%;top:23%}.n9{left:82%;top:78%}
+.l1{left:20%;top:25%;width:145px;transform:rotate(24deg)}
+.l2{left:31%;top:49%;width:130px;transform:rotate(-33deg)}
+.l3{left:22%;top:72%;width:200px;transform:rotate(-14deg)}
+.l4{left:49%;top:19%;width:165px;transform:rotate(32deg)}
+.l5{left:51%;top:82%;width:190px;transform:rotate(-38deg)}
+.l6{left:69%;top:36%;width:105px;transform:rotate(18deg)}
+.l7{left:69%;top:37%;width:94px;transform:rotate(78deg)}
+.l8{left:50%;top:51%;width:208px;transform:rotate(4deg)}
+.l9{left:32%;top:48%;width:335px;transform:rotate(57deg)}
+.l10{left:20%;top:25%;width:420px;transform:rotate(6deg);opacity:.22}
+.neural-tag{position:absolute;font-size:10px;letter-spacing:.21em;font-weight:820;color:#c2d5b7;text-transform:uppercase}
+.tag-top{right:118px;top:135px}.tag-bottom{left:92px;bottom:142px}
+@keyframes spinSlow{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes spinReverse{to{transform:translate(-50%,-50%) rotate(-360deg)}}
+@keyframes neuralPulse{0%,100%{box-shadow:0 0 0 0 rgba(218,255,119,.03)}50%{box-shadow:0 0 0 18px rgba(218,255,119,0)}}
+@keyframes floatNeural{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+@media (max-width:1200px){
+  .brand-type strong{font-size:16px}
+  .desktop-nav a{font-size:13px}
+  .neural-art{right:-230px;top:12px;width:650px;height:650px;opacity:.86}
+}
+@media (max-width:1080px){
+  .brand-type strong{font-size:15px}
+  .brand-type small{font-size:9px;letter-spacing:.16em}
+}
+@media (max-width:780px){
+  .hero-title{margin-top:74px;font-size:clamp(40px,10vw,60px);line-height:1.01;max-width:630px}
+  .hero-message{font-size:clamp(19px,4.6vw,28px)}
+  .hero-desc{font-size:14px;max-width:440px}
+  .neural-art{width:520px;height:520px;right:-220px;top:120px;opacity:.34}
+  .neural-core{width:150px;height:150px}
+  .neural-core span{font-size:56px}
+  .neural-core small{font-size:9px;letter-spacing:.28em}
+  .neural-ring.ring-a{width:210px;height:210px}
+  .neural-ring.ring-b{width:330px;height:330px}
+  .neural-ring.ring-c{width:470px;height:470px}
+  .tag-top{right:72px;top:102px}.tag-bottom{left:48px;bottom:108px}
+}
+@media (max-width:640px){
+  .brand{max-width:calc(100% - 54px)}
+  .brand-type strong{font-size:11px;line-height:1.1;letter-spacing:0}
+  .brand-type small{font-size:7px;letter-spacing:.15em}
+  .hero-content{padding-top:26px;padding-bottom:95px}
+  .hero-title{margin-top:52px;font-size:clamp(34px,11.5vw,48px);max-width:470px}
+  .hero-message{font-size:clamp(18px,5.5vw,23px)}
+  .hero-desc{font-size:13px;line-height:1.72;max-width:350px}
+  .hero-ctas .button{flex:1 1 calc(50% - 6px);justify-content:center}
+  .hero-ctas .button:last-child{flex-basis:100%}
+  .neural-art{width:440px;height:440px;right:-185px;top:135px;opacity:.32}
+  .neural-node{width:9px;height:9px}
+  .neural-line{height:1px}
+  .neural-tag{font-size:8px;letter-spacing:.16em}
+  .tag-top{right:66px;top:98px}.tag-bottom{left:48px;bottom:92px}
+}
+@media (max-width:390px){
+  .brand-type strong{font-size:10px}
+  .brand-type small{font-size:6.5px}
+  .hero-ctas .button{flex-basis:100%}
+}
