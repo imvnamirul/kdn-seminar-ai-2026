@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="styles.css">
   <script defer src="data.js"></script>
   <script defer src="app.js"></script>
+  <script defer src="neural.js"></script>
 </head>
 <body>
   <a href="#kandungan" class="skip-link">Langkau ke kandungan utama</a>
@@ -50,18 +51,6 @@
   <main id="kandungan">
     <section class="hero" id="utama" aria-labelledby="heroTitle">
       <div class="hero-grid-overlay" aria-hidden="true"></div>
-      <div class="neural-art" aria-hidden="true">
-        <div class="neural-core"><span>AI</span><small>KDN 2026</small></div>
-        <div class="neural-ring ring-a"></div>
-        <div class="neural-ring ring-b"></div>
-        <div class="neural-ring ring-c"></div>
-        <div class="neural-grid">
-          <span class="neural-node n1"></span><span class="neural-node n2"></span><span class="neural-node n3"></span><span class="neural-node n4"></span><span class="neural-node n5"></span><span class="neural-node n6"></span><span class="neural-node n7"></span><span class="neural-node n8"></span><span class="neural-node n9"></span>
-          <span class="neural-line l1"></span><span class="neural-line l2"></span><span class="neural-line l3"></span><span class="neural-line l4"></span><span class="neural-line l5"></span><span class="neural-line l6"></span><span class="neural-line l7"></span><span class="neural-line l8"></span><span class="neural-line l9"></span><span class="neural-line l10"></span>
-        </div>
-        <span class="neural-tag tag-top">INTELLIGENCE NETWORK</span>
-        <span class="neural-tag tag-bottom">SECURITY / ANALYTICS</span>
-      </div>
       <div class="container hero-content">
         <div class="hero-topline" aria-hidden="true"></div>
         <p class="hero-overline" aria-hidden="true"></p>
@@ -69,6 +58,12 @@
         <p class="hero-message" id="heroMessage">KEMENTERIAN DALAM NEGERI TAHUN 2026</p>
         <p class="hero-desc" id="heroDescription">Memberi pendedahan mengenai perkembangan AI dalam konteks keselamatan serta implikasinya terhadap persekitaran keselamatan semasa.</p>
         <div class="hero-ctas"><a class="button button-outline" href="#tentang">KENALI SEMINAR <span aria-hidden="true">↗</span></a><a class="button button-lime" href="#aturcara">TEROKA ATUR CARA <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#sesi">AKSES WACANA <span aria-hidden="true">↗</span></a></div>
+        <!-- Live AI sculpture: 3D neural connections, no labels -->
+        <div class="ai-sculpture" aria-hidden="true">
+          <div class="ai-sculpture-aura"></div>
+          <canvas id="neuralCanvas"></canvas>
+          <div class="ai-sculpture-vignette"></div>
+        </div>
         <div class="hero-meta" aria-label="Butiran program">
           <div class="meta-cell"><span class="meta-index">01 / TARIKH</span><strong id="heroDate">23 NOVEMBER 2026</strong><small id="heroWeekday">ISNIN</small></div>
           <div class="meta-cell"><span class="meta-index">02 / MASA</span><strong id="heroTime">8:00 PAGI — 1:00 PETANG</strong><small>WAKTU MALAYSIA</small></div>
