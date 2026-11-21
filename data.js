@@ -10,14 +10,14 @@ window.SEMINAR = {
   ministry: 'Kementerian Dalam Negeri',
   year: '2026',
   theme: 'KECERDASAN · DATA · KESELAMATAN',
-  headline: 'Memahami AI. Mengukuh Keselamatan.',
-  description: 'Meneroka peranan kecerdasan buatan dalam pembuatan keputusan, keselamatan data dan landskap ancaman keselamatan masa kini.',
+  headline: 'KEMENTERIAN DALAM NEGERI TAHUN 2026',
+  description: 'Memberi pendedahan mengenai perkembangan AI dalam konteks keselamatan serta implikasinya terhadap persekitaran keselamatan semasa.',
   date: '2026-11-23',           // Isnin berdasarkan maklumat terbaru pengguna
   startTime: '08:00',
   endTime: '13:00',
-  venue: '',                  // KOSONG = papar “Lokasi akan dimaklumkan”
-  room: '',
-  address: '',
+  venue: 'Silk Hall, Level 1',
+  room: 'Zenith Hotel, Putrajaya',
+  address: 'Aras 1, Zenith Hotel, Putrajaya',
   mapUrl: '',                 // Isi pautan Google Maps apabila tempat disahkan
   organiser: 'Bahagian Perancangan Strategik (PG)',
   officialUrl: 'https://www.moha.gov.my/',
