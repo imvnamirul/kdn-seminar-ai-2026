@@ -72,7 +72,7 @@
         <div class="hero-meta" aria-label="Butiran program">
           <div class="meta-cell"><span class="meta-index">01 / TARIKH</span><strong id="heroDate">23 NOVEMBER 2026</strong><small id="heroWeekday">ISNIN</small></div>
           <div class="meta-cell"><span class="meta-index">02 / MASA</span><strong id="heroTime">8:00 PAGI — 1:00 PETANG</strong><small>WAKTU MALAYSIA</small></div>
-          <div class="meta-cell"><span class="meta-index">03 / TEMPAT</span><strong id="heroVenue">SILK HALL, LEVEL 1</strong><small id="heroRoom">ZENITH HOTEL, PUTRAJAYA</small></div>
+          <div class="meta-cell"><span class="meta-index">03 / TEMPAT</span><strong id="heroVenue">LOKASI AKAN DIMAKLUMKAN</strong><small id="heroRoom">KEMENTERIAN DALAM NEGERI</small></div>
         </div>
       </div>
       <div class="hero-bottom-strip"><div class="container strip-inner"><span>AI IS CHANGING THE LANDSCAPE.</span><span class="strip-mark">✳</span><span>UNDERSTAND IT. SECURE THE FUTURE.</span><span class="strip-end">KDN / 2026</span></div></div>
@@ -118,7 +118,7 @@
     <section class="location-section section" id="lokasi" aria-labelledby="locationTitle">
       <div class="container">
         <div class="section-eyebrow light"><span class="number-dot">05</span><span>VENUE & ESSENTIALS</span><span class="eyebrow-line"></span></div>
-        <div class="location-layout"><div><h2 class="section-title light-text" id="locationTitle">Di mana kita<br><i>bertemu?</i></h2><p class="location-description">Maklumat tempat, ruang program dan panduan kehadiran.</p><div class="venue-card"><span class="venue-card-label">LOKASI SEMINAR</span><h3 id="locationName">Silk Hall, Level 1</h3><p id="locationAddress">Zenith Hotel, Putrajaya</p><a class="venue-map-link" id="mapLink" href="#hubungi" hidden target="_blank" rel="noopener noreferrer">BUKA PETA <span aria-hidden="true">↗</span></a></div></div><div class="location-side"><div class="venue-art"><div class="venue-art-grid"></div><span class="venue-cross cross-1">+</span><span class="venue-cross cross-2">+</span><div class="venue-marker"><span class="venue-pin">✳</span><span class="venue-label">KDN <small>SEMINAR / 2026</small></span></div><span class="venue-art-caption">SILK HALL / LEVEL 1</span></div><div class="quick-tips"><h3>SEBELUM HADIR</h3><div><span>01</span><p>Simpan maklumat jemputan atau pengesahan kehadiran.</p></div><div><span>02</span><p>Hadir lebih awal bagi urusan pendaftaran.</p></div><div><span>03</span><p>Patuhi tatacara keselamatan dan arahan di lokasi.</p></div></div></div></div>
+        <div class="location-layout"><div><h2 class="section-title light-text" id="locationTitle">Di mana kita<br><i>bertemu?</i></h2><p class="location-description">Maklumat tempat, ruang program dan panduan kehadiran.</p><div class="venue-card"><span class="venue-card-label">LOKASI SEMINAR</span><h3 id="locationName">Lokasi akan dimaklumkan</h3><p id="locationAddress">Butiran lokasi sedang diselaraskan oleh urus setia.</p><a class="venue-map-link" id="mapLink" href="#hubungi" hidden target="_blank" rel="noopener noreferrer">BUKA PETA <span aria-hidden="true">↗</span></a></div></div><div class="location-side"><div class="venue-art"><div class="venue-art-grid"></div><span class="venue-cross cross-1">+</span><span class="venue-cross cross-2">+</span><div class="venue-marker"><span class="venue-pin">✳</span><span class="venue-label">KDN <small>SEMINAR / 2026</small></span></div><span class="venue-art-caption">COORDINATES / TO BE CONFIRMED</span></div><div class="quick-tips"><h3>SEBELUM HADIR</h3><div><span>01</span><p>Simpan maklumat jemputan atau pengesahan kehadiran.</p></div><div><span>02</span><p>Hadir lebih awal bagi urusan pendaftaran.</p></div><div><span>03</span><p>Patuhi tatacara keselamatan dan arahan di lokasi.</p></div></div></div></div>
       </div>
     </section>
 
@@ -136,20 +136,5 @@
     </div>
   </div>
   <button id="backToTop" class="back-top" type="button" aria-label="Kembali ke atas">↑</button>
-  <!-- Location fix: applied after deferred app.js so older GitHub JS cannot restore placeholders. -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const venueText = {
-        heroVenue: 'SILK HALL, LEVEL 1',
-        heroRoom: 'ZENITH HOTEL, PUTRAJAYA',
-        locationName: 'Silk Hall, Level 1',
-        locationAddress: 'Zenith Hotel, Putrajaya'
-      };
-      Object.entries(venueText).forEach(function (entry) {
-        const element = document.getElementById(entry[0]);
-        if (element) element.textContent = entry[1];
-      });
-    });
-  </script>
 </body>
 </html>
