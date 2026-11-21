@@ -421,150 +421,234 @@ img{max-width:100%;display:block}
 }
 @media (prefers-reduced-motion:reduce){.ai-sculpture-aura{animation:none}}
 
-
-/* === V5 / Refined editorial typography (Seminar AI) ===
-   Deliberately reduces the heavy display type and improves hierarchy.
-   Override earlier hero weight/size declarations. */
-:root{
-  --ui:"Plus Jakarta Sans","Segoe UI",Arial,Helvetica,sans-serif;
+/* ============================================================
+   V8 / SEMINAR AI KDN — INSTITUTIONAL IMPACT
+   Inspired by the authority & visual clarity of the earlier
+   KDN programme, with a distinct navy-green seminar identity.
+   ============================================================ */
+.hero{
+  background:#0a1628;
+  color:#f8fbff;
+  position:relative;
+  min-height:780px;
+  isolation:isolate;
+  overflow:hidden;
 }
-body{font-family:var(--ui);font-optical-sizing:auto}
-.hero-title{
-  font-family:var(--ui);
-  font-size:clamp(48px,5.15vw,84px)!important;
-  font-weight:700!important;
-  line-height:1.095!important;
-  letter-spacing:-.055em!important;
-  max-width:830px!important;
-  margin-top:80px;
-  margin-bottom:22px;
-  text-wrap:balance;
+.hero::before{
+  content:"";
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(90deg,rgba(8,22,43,.95) 0%,rgba(9,23,45,.90) 31%,rgba(9,27,48,.70) 62%,rgba(8,22,42,.58) 100%),
+    linear-gradient(0deg,rgba(6,20,35,.88) 0%,transparent 42%),
+    url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Putrajaya_Malaysia_Ministry-of-Home-Affairs-02.jpg/1280px-Putrajaya_Malaysia_Ministry-of-Home-Affairs-02.jpg");
+  background-size:cover,cover,cover;
+  background-position:center,center,center 41%;
+  background-repeat:no-repeat;
+  opacity:1;
+  filter:saturate(.78) contrast(1.02);
 }
-.hero-title em{
-  font-weight:700!important;
-  letter-spacing:-.045em!important;
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse at 88% 43%,rgba(78,181,148,.16),transparent 41%),
+    linear-gradient(90deg,rgba(5,16,34,.12),transparent 60%);
 }
-.hero-message{
-  font-family:var(--ui);
-  font-size:clamp(18px,1.55vw,25px)!important;
-  font-weight:600!important;
-  letter-spacing:.006em!important;
-  line-height:1.4!important;
-  max-width:830px!important;
-  text-wrap:balance;
+.hero-grid-overlay{
+  z-index:1;
+  opacity:.11;
+  background-size:96px 96px;
 }
-.hero-desc{
-  font-family:var(--ui);
-  font-size:15px!important;
-  font-weight:400;
-  line-height:1.85;
-  letter-spacing:0;
-  max-width:680px;
-  color:#c4cbc3;
+.hero-content{
+  padding-top:64px;
+  padding-bottom:118px;
+  position:relative;z-index:2;
 }
-.brand-type strong{font-weight:700!important;letter-spacing:-.01em!important}
-.desktop-nav a{font-weight:600!important}
-.section-title{font-weight:700;letter-spacing:-.06em}
-@media (max-width:1080px){
-  .hero-title{font-size:clamp(44px,6.4vw,70px)!important;max-width:760px!important}
-  .hero-message{font-size:clamp(18px,2.4vw,24px)!important}
-}
-@media (max-width:780px){
-  .hero-title{font-size:clamp(38px,7.8vw,56px)!important;margin-top:55px;line-height:1.12!important}
-  .hero-message{font-size:clamp(17px,3vw,23px)!important}
-  .hero-desc{font-size:14px!important;line-height:1.7}
-}
-@media (max-width:480px){
-  .hero-title{font-size:clamp(34px,9.1vw,44px)!important;letter-spacing:-.05em!important;margin-top:35px}
-  .hero-title em{letter-spacing:-.025em!important}
-  .hero-message{font-size:clamp(16px,4.2vw,19px)!important;line-height:1.4!important}
-  .hero-desc{font-size:13px!important}
-}
-
-/* =============================================================
-   V7 / KDN OFFICIAL: MODERN INSTITUTIONAL TYPOGRAPHY
-   Restrained sans-serif hierarchy; no italic, playful badges,
-   oversized all-caps, or decorative gradients.
-   ============================================================= */
-.hero-title.hero-official{
-  display:flex; flex-direction:column; align-items:flex-start;
-  width:fit-content; max-width:750px!important;
-  margin:74px 0 0!important;
+.hero-title.hero-institutional{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  width:min(100%,920px);
+  max-width:920px!important;
+  margin:26px 0 0!important;
+  padding:29px 0 0;
   font-family:"Manrope","Plus Jakarta Sans","Segoe UI",Arial,sans-serif;
-  font-size:initial!important; font-weight:600!important;
-  line-height:normal!important; letter-spacing:normal!important;
+  font-weight:750!important;
+  letter-spacing:normal!important;
+  line-height:1!important;
   text-wrap:initial;
+  font-size:initial!important;
 }
-.hero-official-overline{
-  display:flex;align-items:center;gap:16px;
-  margin:0 0 27px;
-  font-family:inherit;
-  font-size:clamp(15px,1.15vw,19px);
-  font-weight:600;
-  line-height:1.3;
-  letter-spacing:.17em;
-  color:#d8e2d8;
+.hero-title.hero-institutional::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;width:110px;height:3px;
+  background:linear-gradient(90deg,#d6ff82,#76ded6);
+  box-shadow:0 0 19px rgba(130,243,216,.32);
 }
-.hero-official-overline::before{
-  content:"";display:inline-block;width:34px;height:2px;
-  background:var(--lime);
-}
-.hero-official-main{
+.hero-official-line{
   display:block;
-  font-size:clamp(55px,5.05vw,88px);
-  line-height:1.13;
-  font-weight:600;
-  letter-spacing:-.061em;
-  color:#f7f8f6;
   white-space:nowrap;
+  font-weight:750;
+  text-transform:uppercase;
+  letter-spacing:-.075em;
+  color:#fdfefd;
+  text-shadow:0 8px 24px rgba(4,13,25,.34);
 }
-.hero-official-last{margin-top:-4px}
-.hero-official-accent{
-  color:var(--lime);
-  font-size:.79em;
-  font-weight:600;
-  letter-spacing:-.045em;
+.hero-line-one{
+  font-size:clamp(54px,4.7vw,78px);
+  line-height:1.06;
+}
+.hero-line-two{
+  font-size:clamp(59px,5.5vw,91px);
+  line-height:1.055;
+}
+.hero-line-three{
+  font-size:clamp(64px,5.8vw,96px);
+  line-height:1.07;
+}
+.hero-ai-highlight{
+  color:#d7ff80;
+  font-size:.82em;
+  letter-spacing:-.066em;
+  text-shadow:0 0 28px rgba(180,255,116,.25);
 }
 .hero-message#heroMessage{
   display:block;
-  margin:26px 0 0;
-  max-width:750px!important;
-  font-family:"Manrope","Plus Jakarta Sans","Segoe UI",Arial,sans-serif;
-  font-size:clamp(14px,1.12vw,18px)!important;
-  line-height:1.55!important;
-  font-weight:600!important;
-  letter-spacing:.07em!important;
+  max-width:790px!important;
+  margin:20px 0 0;
+  font-family:"Manrope","Plus Jakarta Sans",Arial,sans-serif;
+  font-size:clamp(16px,1.23vw,20px)!important;
+  line-height:1.5!important;
+  font-weight:700!important;
+  letter-spacing:.065em!important;
+  color:#e9f1f2;
   text-transform:uppercase;
-  color:#e9f0e9;
 }
 .hero-message#heroMessage::before{display:none!important}
 .hero-desc#heroDescription{
-  font-family:"Manrope","Plus Jakarta Sans",Arial,sans-serif;
-  max-width:620px;
-  margin:18px 0 32px;
-  font-size:14px!important;
-  line-height:1.9;
+  max-width:650px;
+  margin:17px 0 30px;
+  font-size:15px!important;
+  line-height:1.8;
   letter-spacing:0;
   font-weight:400;
-  color:#b9c7bd;
+  color:#cddde2;
+  text-shadow:0 1px 10px rgba(3,13,23,.3);
 }
-@media(max-width:1200px){
-  .hero-title.hero-official{max-width:700px!important;margin-top:66px!important}
-  .hero-official-main{font-size:clamp(50px,5.6vw,76px)}
+.hero-ctas{
+  position:relative;
+  z-index:3;
+  gap:12px;
 }
-@media(max-width:780px){
-  .hero-title.hero-official{width:100%;max-width:100%!important;margin-top:48px!important}
-  .hero-official-overline{margin-bottom:19px;font-size:14px}
-  .hero-official-main{font-size:clamp(38px,7.5vw,58px);line-height:1.15;letter-spacing:-.054em}
-  .hero-message#heroMessage{font-size:clamp(13px,2.75vw,16px)!important;margin-top:21px;letter-spacing:.045em!important}
-  .hero-desc#heroDescription{font-size:13px!important;max-width:445px;line-height:1.8}
+.hero-ctas .button{
+  min-height:52px;
+  font-size:11px;
+  letter-spacing:.07em;
+  border-radius:4px;
+  font-weight:800;
 }
-@media(max-width:480px){
-  .hero-title.hero-official{margin-top:34px!important}
-  .hero-official-overline{font-size:12px;margin-bottom:18px}
-  .hero-official-overline::before{width:25px}
-  .hero-official-main{font-size:clamp(33px,8.75vw,43px);letter-spacing:-.053em}
-  .hero-official-last{margin-top:-1px}
-  .hero-message#heroMessage{font-size:12px!important;letter-spacing:.025em!important;line-height:1.7!important}
-  .hero-desc#heroDescription{font-size:12.5px!important}
+.hero-ctas .button-outline{
+  border-color:rgba(216,237,235,.62);
+  background:rgba(13,37,55,.34);
+  backdrop-filter:blur(5px);
+}
+.hero-ctas .button-lime{background:#d7ff80;color:#12242b}
+.hero-ctas .button-outline:hover{background:#e6f9f5;color:#0d2132}
+.ai-sculpture{
+  right:-175px!important;
+  top:52px!important;
+  width:630px!important;
+  opacity:.74!important;
+  mix-blend-mode:screen;
+  filter:drop-shadow(0 0 55px rgba(103,251,207,.13));
+}
+.hero-meta{
+  border-top:1px solid rgba(221,241,242,.36);
+  margin-top:62px;
+  max-width:1125px;
+  background:linear-gradient(90deg,rgba(9,27,47,.38),rgba(12,35,48,.15));
+  backdrop-filter:blur(4px);
+}
+.hero-meta .meta-cell{padding-top:23px;padding-bottom:18px}
+.hero-meta .meta-index{color:#d7ff80}
+.hero-meta .meta-cell strong{color:#f8fbfc}
+.hero-meta .meta-cell small{color:#b7d0d0}
+.hero-bottom-strip{
+  background:#d7ff80;
+  color:#102a3a;
+}
+.hero-photo-credit{
+  position:absolute;
+  bottom:67px;
+  right:26px;
+  z-index:3;
+  max-width:330px;
+  text-align:right;
+  color:rgba(233,245,246,.59);
+  font:400 9px/1.45 "Manrope",Arial,sans-serif;
+  text-shadow:0 2px 6px #081626;
+}
+.hero-photo-credit a{text-decoration:underline;text-underline-offset:2px}
+.hero-photo-credit a:hover{color:#e6ffbf}
+@media (min-width:1600px){
+  .hero-title.hero-institutional{margin-top:35px!important}
+  .ai-sculpture{right:-205px!important;top:75px!important;width:740px!important}
+}
+@media (min-width:1081px) and (max-width:1390px){
+  .hero-line-one{font-size:clamp(51px,4.7vw,67px)}
+  .hero-line-two{font-size:clamp(57px,5.4vw,77px)}
+  .hero-line-three{font-size:clamp(60px,5.7vw,81px)}
+  .ai-sculpture{right:-215px!important;width:580px!important;opacity:.62!important}
+}
+@media (max-width:1080px){
+  .hero::before{background-position:center,center,62% center}
+  .hero-title.hero-institutional{margin-top:23px!important}
+  .hero-line-one{font-size:clamp(42px,5.5vw,60px)}
+  .hero-line-two{font-size:clamp(49px,6.2vw,70px)}
+  .hero-line-three{font-size:clamp(52px,6.4vw,75px)}
+  .ai-sculpture{right:-155px!important;top:105px!important;width:520px!important;opacity:.50!important}
+}
+@media (max-width:780px){
+  .hero{min-height:0}
+  .hero::before{
+    background-image:
+      linear-gradient(90deg,rgba(6,19,38,.91),rgba(8,29,48,.84)),
+      linear-gradient(0deg,rgba(6,19,38,.95),rgba(7,23,42,.16) 60%),
+      url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Putrajaya_Malaysia_Ministry-of-Home-Affairs-02.jpg/1280px-Putrajaya_Malaysia_Ministry-of-Home-Affairs-02.jpg");
+    background-position:center,center,59% 32%;
+  }
+  .hero-content{padding-top:40px;padding-bottom:82px}
+  .hero-title.hero-institutional{max-width:100%!important;padding-top:25px;margin:15px 0 0!important}
+  .hero-line-one{font-size:clamp(39px,8.7vw,67px)}
+  .hero-line-two{font-size:clamp(42px,9.2vw,71px)}
+  .hero-line-three{font-size:clamp(45px,9.6vw,74px)}
+  .hero-message#heroMessage{font-size:clamp(13px,3.2vw,18px)!important;letter-spacing:.04em!important;margin-top:19px}
+  .hero-desc#heroDescription{font-size:13px!important;line-height:1.8;max-width:500px}
+  .ai-sculpture{
+    position:relative!important;right:auto!important;top:auto!important;
+    width:min(480px,100%)!important;margin:10px auto 0!important;
+    opacity:.86!important;mix-blend-mode:screen;
+  }
+  .hero-meta{margin-top:25px;background:rgba(9,27,47,.18)}
+  .hero-photo-credit{bottom:52px;right:18px;font-size:8px;max-width:250px}
+}
+@media (max-width:480px){
+  .hero-content{padding-top:25px;padding-bottom:60px}
+  .hero-title.hero-institutional{margin-top:8px!important}
+  .hero-line-one{font-size:clamp(31px,9.0vw,44px)}
+  .hero-line-two{font-size:clamp(35px,9.3vw,46px)}
+  .hero-line-three{font-size:clamp(36px,9.5vw,47px)}
+  .hero-ai-highlight{font-size:.78em}
+  .hero-message#heroMessage{font-size:clamp(12px,3.2vw,15px)!important}
+  .hero-desc#heroDescription{font-size:12.5px!important;max-width:355px}
+  .hero-ctas{gap:9px}
+  .hero-ctas .button{font-size:9px}
+  .hero-photo-credit{bottom:49px;font-size:7px;max-width:205px}
+}
+@media (max-width:370px){
+  .hero-line-one{font-size:30px}
+  .hero-line-two{font-size:33px}
+  .hero-line-three{font-size:34px}
+}
+@media print{
+  .hero::before{background-image:none!important;background:#081626!important}
 }
