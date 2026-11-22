@@ -1347,3 +1347,244 @@ img{max-width:100%;display:block}
   .modal-profile-content{padding:22px 17px 29px}
   .modal-profile-dialog .modal-info-block h3{font-size:20px}
 }
+
+
+/* =============================================================
+   V20 / RINGKASAN WACANA — seminar sage / charcoal / lime.
+   Speaker-deck summary layout inspired by the previous course,
+   without importing the previous course's blue colour palette.
+   ============================================================= */
+.wacana-library-section{
+  background:#f7f8f2;
+  color:#1e2820;
+  position:relative;
+}
+.wacana-library-heading{margin-bottom:42px}
+.wacana-library-heading .section-title{
+  font-size:clamp(58px,5.8vw,86px);
+  line-height:1.02;
+  letter-spacing:-.073em;
+}
+.wacana-library-heading .section-title i{
+  color:#819e5c;
+}
+.wacana-library-heading .heading-note{
+  max-width:360px;
+  font-size:16px;
+  line-height:1.72;
+  color:#627263;
+}
+.wacana-summary-list{
+  display:grid;
+  gap:24px;
+}
+.wacana-brief{
+  min-width:0;
+  display:grid;
+  grid-template-columns:minmax(295px,33%) minmax(0,1fr);
+  border:1px solid #637a62;
+  border-top:3px solid #d7ff7d;
+  border-radius:16px;
+  overflow:hidden;
+  background:#26362b;
+  box-shadow:0 19px 45px rgba(28,47,33,.10);
+}
+.wacana-brief-left{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  padding:34px 31px 30px;
+  background:
+    radial-gradient(circle at 92% 5%,rgba(208,244,156,.085),transparent 42%),
+    linear-gradient(145deg,#334837,#213328 66%,#1e2e25);
+  border-right:1px solid rgba(194,220,186,.17);
+  color:#f7faf3;
+}
+.wacana-brief-pill{
+  display:inline-flex;
+  align-items:center;
+  border:1px solid rgba(217,255,131,.42);
+  border-radius:999px;
+  padding:9px 14px;
+  margin-bottom:24px;
+  font-size:11px;
+  font-weight:850;
+  line-height:1;
+  letter-spacing:.10em;
+  color:#d9ff83;
+  background:rgba(216,255,131,.07);
+}
+.wacana-brief-left h3{
+  margin:0 0 23px;
+  font-size:clamp(25px,2.3vw,35px);
+  font-weight:800;
+  letter-spacing:-.055em;
+  line-height:1.2;
+  color:#f5faf2;
+  overflow-wrap:break-word;
+}
+.wacana-brief-speaker{
+  display:grid;
+  gap:5px;
+  margin-bottom:26px;
+}
+.wacana-brief-speaker strong{
+  font-size:16px;
+  font-weight:750;
+  line-height:1.45;
+  color:#edf5e7;
+}
+.wacana-brief-speaker small{
+  font-size:13px;
+  font-weight:600;
+  line-height:1.55;
+  color:#b9d0b5;
+}
+.wacana-brief-actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:auto;
+  padding-top:25px;
+  width:100%;
+}
+.wacana-brief-button{
+  min-height:47px;
+  border-radius:7px;
+  padding:11px 15px;
+  border:1px solid rgba(203,231,183,.53);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  font:800 11px/1.2 "Plus Jakarta Sans",Arial,sans-serif;
+  letter-spacing:.035em;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:transform .17s ease,background .17s ease;
+}
+.wacana-brief-button:not(:disabled):hover{transform:translateY(-2px)}
+.wacana-brief-button.primary{
+  background:#d9ff83;
+  border-color:#d9ff83;
+  color:#1b3020;
+}
+.wacana-brief-button.secondary{
+  background:transparent;
+  color:#ecf7e7;
+}
+.wacana-brief-button.secondary:hover{background:rgba(217,255,131,.12)}
+.wacana-brief-button:focus-visible{
+  outline:3px solid #d9ff83;
+  outline-offset:3px;
+}
+.wacana-brief-button:disabled{opacity:.58;cursor:progress}
+.wacana-brief-count{
+  display:block;
+  margin-top:14px;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.1em;
+  color:#a4baa0;
+}
+.wacana-brief-right{
+  min-width:0;
+  padding:32px 32px 31px;
+  background:linear-gradient(150deg,#2b3d30 0%,#233329 100%);
+}
+.wacana-brief-intro{
+  font-size:17px;
+  line-height:1.75;
+  margin:0 0 25px;
+  color:#e4f0dc;
+  font-weight:500;
+  max-width:880px;
+}
+.wacana-brief-panels{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:15px;
+  align-items:stretch;
+}
+.wacana-detail-panel{
+  background:#1d3025;
+  border:1px solid #4d6b50;
+  border-radius:12px;
+  padding:23px 22px 24px;
+  min-width:0;
+}
+.wacana-detail-panel.outcomes{
+  background:#26392b;
+  border-color:#6a7b55;
+}
+.wacana-detail-panel h4{
+  margin:0 0 17px;
+  color:#d7ff83;
+  font-size:13px;
+  line-height:1.45;
+  font-weight:850;
+  letter-spacing:.06em;
+}
+.wacana-detail-panel.outcomes h4{color:#f0dc99}
+.wacana-detail-panel ul{
+  padding:0 0 0 19px;
+  margin:0;
+  display:grid;
+  gap:13px;
+}
+.wacana-detail-panel li{
+  padding-left:4px;
+  color:#e7efe4;
+  font-size:15px;
+  line-height:1.64;
+  font-weight:450;
+}
+.wacana-detail-panel li::marker{color:#b7e97d}
+.wacana-detail-panel.outcomes li::marker{color:#ead18a}
+.wacana-loading{
+  padding:35px;
+  color:#405842;
+  font-size:16px;
+}
+@media(max-width:1120px){
+  .wacana-brief{grid-template-columns:minmax(260px,35%) minmax(0,1fr)}
+  .wacana-brief-left{padding:27px 22px}
+  .wacana-brief-right{padding:26px 23px}
+  .wacana-brief-panels{gap:11px}
+  .wacana-detail-panel{padding:20px 17px}
+  .wacana-detail-panel li{font-size:14px}
+}
+@media(max-width:900px){
+  .wacana-library-heading .heading-note{max-width:480px}
+  .wacana-brief{grid-template-columns:1fr}
+  .wacana-brief-left{
+    border-right:0;
+    border-bottom:1px solid rgba(194,220,186,.18);
+    padding:27px 27px 25px;
+  }
+  .wacana-brief-left h3{font-size:30px;max-width:700px}
+  .wacana-brief-actions{margin-top:0}
+  .wacana-brief-right{padding:25px 27px 30px}
+}
+@media(max-width:620px){
+  .wacana-library-heading{margin-bottom:27px}
+  .wacana-library-heading .section-title{font-size:clamp(41px,8.4vw,60px)}
+  .wacana-library-heading .heading-note{font-size:14px}
+  .wacana-summary-list{gap:19px}
+  .wacana-brief{border-radius:11px}
+  .wacana-brief-left{padding:25px 20px 23px}
+  .wacana-brief-right{padding:23px 19px 27px}
+  .wacana-brief-left h3{font-size:25px}
+  .wacana-brief-pill{margin-bottom:18px}
+  .wacana-brief-panels{grid-template-columns:1fr;gap:12px}
+  .wacana-detail-panel{padding:21px 18px}
+  .wacana-detail-panel li{font-size:15px}
+  .wacana-brief-intro{font-size:15px}
+  .wacana-brief-button{font-size:10px;min-height:45px}
+}
+@media(max-width:390px){
+  .wacana-brief-actions{flex-direction:column;align-items:stretch}
+  .wacana-brief-button{width:100%}
+}

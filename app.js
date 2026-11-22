@@ -118,26 +118,94 @@
     else if(!e.shiftKey && document.activeElement===last){e.preventDefault();first.focus();}
   });
 
-  // Resources — search and type filters. No dummy download buttons.
-  const resources = Array.isArray(d.resources) ? d.resources : [];
-  let activeResourceFilter = 'all';
-  function renderResources(){
-    const search = $('#resourceSearch').value.trim().toLowerCase();
-    const shown=resources.filter(r => (activeResourceFilter==='all'||r.type===activeResourceFilter) && `${r.title||''} ${r.note||''}`.toLowerCase().includes(search));
-    const target=$('#resourcesList');
-    if(!shown.length){const hasResources=resources.length>0;target.innerHTML=`<div class="resource-empty"><span class="empty-symbol" aria-hidden="true">${hasResources?'⌕':'✳'}</span><div><h3>${hasResources?'Tiada padanan ditemui.':'Bahan dalam penyediaan.'}</h3><p>${hasResources?'Cuba kata kunci atau tapisan yang lain.':'Bahan pembentangan dan dokumen sokongan akan dipaparkan selepas mendapat pengesahan untuk dikongsi oleh urus setia.'}</p></div></div>`;return;}
-    target.innerHTML=shown.map(r => {
-      const href=isUrl(r.url)?r.url:'';const isPdf=r.type==='pdf';
-      return `<div class="resource-row"><span class="resource-icon" aria-hidden="true">${isPdf?'▤':'↗'}</span><div class="resource-detail"><small>${isPdf?'DOKUMEN':'PAUTAN'}</small><h3>${esc(r.title)}</h3><p>${esc(r.note || '')}</p></div>${href?`<a class="resource-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">BUKA ↗</a>`:'<span class="resource-link" aria-label="Belum tersedia">BELUM ADA</span>'}</div>`;
-    }).join('');
+  // Wacana briefings — grounded in speaker slide decks; PDF parts are
+  // assembled on demand to keep the static GitHub Pages site lightweight.
+  const briefs = Array.isArray(d.wacanaBriefs) ? d.wacanaBriefs : [];
+  const sessionByCode = new Map((Array.isArray(d.sessions) ? d.sessions : []).map(s => [String(s.code),s]));
+  const pdfCache = new Map();
+  $('#wacanaSummaries').innerHTML = briefs.map((b,i) => {
+    const speaker = sessionByCode.get(String(b.code)) || {};
+    const list = (items) => '<ul>' + (items||[]).map(item => '<li>'+esc(item)+'</li>').join('') + '</ul>';
+    return '<article class="wacana-brief" id="ringkasan-wacana-'+esc(b.code)+'">' +
+      '<div class="wacana-brief-left">' +
+        '<span class="wacana-brief-pill">WACANA '+esc(b.code)+'</span>' +
+        '<h3>'+esc(speaker.title||'Tajuk Wacana')+'</h3>' +
+        '<div class="wacana-brief-speaker"><strong>'+esc(speaker.speaker||'Penceramah')+'</strong><small>'+esc(speaker.role||'')+'</small></div>' +
+        '<div class="wacana-brief-actions">' +
+          '<button type="button" class="wacana-brief-button primary" data-deck-index="'+i+'" data-deck-action="download">↓ MUAT TURUN PDF</button>' +
+          '<button type="button" class="wacana-brief-button secondary" data-deck-index="'+i+'" data-deck-action="view">◉ LIHAT SLAID</button>' +
+        '</div>' +
+        '<span class="wacana-brief-count">'+esc(String(b.pageCount||''))+' HALAMAN SLAID</span>' +
+      '</div>' +
+      '<div class="wacana-brief-right">' +
+        '<p class="wacana-brief-intro">'+esc(b.intro||'')+'</p>' +
+        '<div class="wacana-brief-panels">' +
+          '<section class="wacana-detail-panel"><h4>RINGKASAN KANDUNGAN</h4>'+list(b.content)+'</section>' +
+          '<section class="wacana-detail-panel outcomes"><h4>HASIL PEMBELAJARAN</h4>'+list(b.outcomes)+'</section>' +
+        '</div>' +
+      '</div>' +
+    '</article>';
+  }).join('');
+
+  // PDF1 is a normal file. PDFs 2 and 3 are split into static base64
+  // resources; concatenate and decode when a visitor requests them.
+  async function deckUrlFor(index) {
+    const brief=briefs[index];
+    if (!brief) throw new Error('Wacana tidak ditemui');
+    if (brief.pdf) return new URL(brief.pdf,document.baseURI).href;
+    if (pdfCache.has(index)) return pdfCache.get(index);
+    if (!brief.partPrefix || !brief.partCount) throw new Error('Fail pembentangan belum tersedia');
+    const paths=Array.from({length:brief.partCount},(_,i)=>brief.partPrefix+String(i+1).padStart(2,'0')+'.b64');
+    const segments=await Promise.all(paths.map(async path=>{
+      const response=await fetch(path,{cache:'force-cache'});
+      if(!response.ok)throw new Error('Fail slaid tidak dapat dicapai: '+path);
+      return (await response.text()).replace(/\s+/g,'');
+    }));
+    const encoded=segments.join('');
+    const binary=atob(encoded);
+    const buffer=new Uint8Array(binary.length);
+    for(let i=0;i<binary.length;i++)buffer[i]=binary.charCodeAt(i);
+    const url=URL.createObjectURL(new Blob([buffer],{type:'application/pdf'}));
+    pdfCache.set(index,url);
+    return url;
   }
-  renderResources();
-  $('#resourceSearch').addEventListener('input',renderResources);
-  $$('[data-resource-filter]').forEach(btn=>btn.addEventListener('click',()=>{
-    activeResourceFilter=btn.dataset.resourceFilter;
-    $$('[data-resource-filter]').forEach(b=>{const active=b===btn;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
-    renderResources();
+
+  $$('[data-deck-action]').forEach(button=>button.addEventListener('click',async ()=>{
+    const idx=Number(button.dataset.deckIndex);
+    const brief=briefs[idx];
+    const action=button.dataset.deckAction;
+    const viewer=action==='view' ? window.open('','_blank') : null;
+    if(viewer) {
+      viewer.opener=null;
+      viewer.document.title='Memuatkan slaid seminar…';
+      viewer.document.body.textContent='Memuatkan slaid seminar…';
+    }
+    const originalLabel=button.textContent;
+    button.disabled=true;
+    button.textContent='MENYEDIAKAN SLAID…';
+    try{
+      const url=await deckUrlFor(idx);
+      if(action==='view'){
+        if(viewer) viewer.location.href=url;
+        else window.open(url,'_blank');
+      }else{
+        const a=document.createElement('a');
+        a.href=url;
+        a.download=brief.fileName||('wacana-'+brief.code+'.pdf');
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      }
+    }catch(error){
+      if(viewer && !viewer.closed)viewer.close();
+      window.alert('Maaf, slaid tidak dapat dibuka. Sila cuba lagi atau maklumkan kepada urus setia.');
+      console.error('Wacana PDF gagal dimuatkan:',error);
+    }finally{
+      button.disabled=false;
+      button.textContent=originalLabel;
+    }
   }));
+  window.addEventListener('pagehide',()=>pdfCache.forEach(url=>URL.revokeObjectURL(url)));
 
   // FAQ and administrative contacts.
   $('#faqList').innerHTML=(Array.isArray(d.faq)?d.faq:[]).map(item=>`<details class="faq-item"><summary>${esc(item.q)}</summary><p>${esc(item.a)}</p></details>`).join('');

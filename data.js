@@ -51,11 +51,53 @@ window.SEMINAR = {
     { code:'02', topic:'AI / KESELAMATAN SIBER', title:'AI Keselamatan Siber: Antara Potensi dan Risiko', description:'Meneroka peluang penggunaan AI dalam keselamatan siber serta risiko seperti kebocoran data, ancaman kepada sistem AI dan penyalahgunaan teknologi terhadap agensi KDN.', speaker:'YBrs. Ts. Dr. Azlina binti Ab. Aziz', role:'Ketua Penolong Pengarah, Agensi Keselamatan Siber Negara (NACSA), MKN, JPM', photo:'assets/wacana2_azlina.webp', bio:'• Lebih 20 tahun pengalaman dalam perkhidmatan awam, termasuk JPJ, MOSTI dan MAFI, dengan kepakaran dalam tadbir urus ICT, transformasi digital dan inovasi sektor awam.\n• Memiliki Ph.D. dalam Sains Maklumat (UKM), Sarjana Teknologi Maklumat (UiTM) serta Ijazah Sarjana Muda dan Diploma Sains Komputer (UPM).\n• Menerajui pembangunan AISCF, Dasar Kriptografi Negara (MyKriptografi) dan Pelan Tindakan MyKriptografi 2026–2030; turut menyumbang kepada MCSS 2025–2030.\n• Felo UNIDIR Women in AI serta ahli Kumpulan Kerja Keselamatan AI (AI Malaysia Berhad) dan Jawatankuasa Keselamatan Siber NBAIC.', tags:['Keselamatan Siber','AI','Kriptografi'] },
     { code:'03', topic:'JENAYAH DIGITAL / IDENTITI', title:'Apabila AI Menjadi Senjata: Jenayah Digital, Pemalsuan Identiti dan Cabaran Keselamatan Negara', description:'Perkongsian mengenai jenayah digital, pemalsuan identiti dan cabaran keselamatan negara berkaitan AI.', speaker:'Ts. Fakhrul Afiq bin Abd Aziz', role:'Senior Analyst, Unit AI, CyberSecurity Malaysia', photo:'assets/wacana3_fakhrul.webp', bio:'• Pakar forensik digital dan keselamatan siber dengan pengalaman lebih 10 tahun di CyberSecurity Malaysia.\n• Memiliki Ijazah Sarjana dalam Digital Security dari EURECOM, Perancis.\n• Mengendalikan siasatan forensik digital termasuk kes berprofil tinggi dan memberikan keterangan sebagai saksi pakar di mahkamah.\n• Mengetuai Makmal Forensik Kenderaan CyberSecurity Malaysia serta terlibat dalam pembangunan CamScore dan Modern Vehicle Expert Consortium.\n• Mengetuai pembangunan TERAI dan menyumbang kepada MyAISAFE, AISCF dan MTSFB Technical Code on Artificial Intelligence.\n• Berkongsi kepakaran di peringkat antarabangsa melalui UNODC dan INTERPOL.', tags:['Jenayah Digital','Pemalsuan Identiti','Keselamatan Negara'] }
   ],
-  resources: [
-    /* Contoh selepas bahan tersedia:
-      {type:'pdf', title:'Slaid Sesi 1', note:'Bahan pembentangan', url:'bahan/slaid-sesi-1.pdf'},
-      {type:'link', title:'Rujukan Rasmi', note:'Bahan bacaan', url:'https://www.example.gov.my'}
-    */
+  // Inti pati dirumus daripada slaid sebenar ketiga-tiga pembentang.
+  wacanaBriefs: [
+    {
+      code:'01', fileName:'Wacana_01_Konsep_Penggunaan_Data.pdf', pageCount:37,
+      pdf:'bahan/wacana-01.pdf',
+      intro:'Memahami bagaimana data dinilai dan diterjemahkan menjadi keputusan yang lebih tepat, berasaskan contoh serta pengalaman pembangunan sistem IKKA di KDN.',
+      content:[
+        'Rantaian data → ukuran → tafsiran → keputusan: data perlu tepat, lengkap dan tersedia pada masa yang diperlukan.',
+        'Risiko data dan maklumat apabila menggunakan aplikasi digital serta chatbot AI; kepentingan kawalan dan pengelasan data.',
+        'Empat tahap analitik — deskriptif, diagnostik, prediktif dan preskriptif — serta pengalaman sistem IKKA.'
+      ],
+      outcomes:[
+        'Menilai kualiti serta konteks data sebelum membuat kesimpulan atau keputusan.',
+        'Mengenal pasti data rasmi yang tidak wajar dikongsi melalui alat AI tanpa kelulusan.',
+        'Menggunakan soalan analitik yang betul untuk menyokong pertimbangan dasar dan operasi.'
+      ]
+    },
+    {
+      code:'02', fileName:'Wacana_02_AI_dan_Keselamatan_Siber.pdf', pageCount:64,
+      partPrefix:'bahan/wacana-02.part', partCount:10,
+      intro:'Meneroka potensi AI dalam meningkatkan kecekapan agensi KDN sambil memahami ancaman, risiko serta keperluan keselamatan siber dan tadbir urus AI yang bertanggungjawab.',
+      content:[
+        'Peluang penggunaan AI untuk produktiviti, analisis dan sokongan tugas harian atau operasi agensi.',
+        'Risiko keselamatan siber yang wujud dan diperkasa oleh AI, termasuk pendedahan maklumat serta penyalahgunaan teknologi.',
+        'Keperluan memperkukuh kesedaran keselamatan, disiplin penggunaan AI dan akauntabiliti warga KDN.'
+      ],
+      outcomes:[
+        'Mengenal pasti kes penggunaan AI yang bermanfaat dengan kawalan keselamatan yang sesuai.',
+        'Memahami risiko kepada data, sistem dan proses membuat keputusan apabila menggunakan AI.',
+        'Mempraktikkan penggunaan AI yang beretika, menyemak maklumat dan melaporkan insiden mencurigakan.'
+      ]
+    },
+    {
+      code:'03', fileName:'Wacana_03_Apabila_AI_Menjadi_Senjata.pdf', pageCount:48,
+      partPrefix:'bahan/wacana-03.part', partCount:9,
+      intro:'Menjelaskan bagaimana AI mempercepat jenayah digital dan pemalsuan identiti, serta langkah mengesahkan maklumat, melindungi dokumen dan memelihara integriti bukti.',
+      content:[
+        'Deepfake, suara klon, jenayah siber sebagai perkhidmatan (CaaS) dan penipuan yang menyamar sebagai pihak berautoriti.',
+        'Pemalsuan dokumen dan biometrik, manipulasi maklumat serta cabaran mengesahkan ketulenan bukti digital.',
+        'Risiko model dan agen AI, prompt injection serta implikasi keselamatan kepada agensi penguatkuasaan.'
+      ],
+      outcomes:[
+        'Mengecam modus operandi penipuan AI dan tanda amaran pada video, audio serta dokumen.',
+        'Mengesahkan identiti, arahan dan maklumat melalui saluran rasmi yang berasingan.',
+        'Mengamalkan langkah SEMAK, SAHKAN, LINDUNGI dan LAPORKAN apabila berdepan ancaman AI.'
+      ]
+    }
   ],
   contacts: [
     { name:'Cik Siti Hanizah Binti Tupani', role:'Urus Setia Seminar', email:'sitihanizah@moha.gov.my' },
