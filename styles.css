@@ -657,3 +657,93 @@ img{max-width:100%;display:block}
     line-height:1.4;
   }
 }
+
+
+/* V12 — Two-way institutional AI identity ribbon */
+.hero-bottom-strip{
+  height:64px;
+  background:#d9ff83;
+  color:#11251b;
+  border-top:1px solid rgba(255,255,255,.16);
+}
+.hero-bottom-strip .strip-inner.strip-bidirectional{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(84px,210px) minmax(0,1fr);
+  align-items:center;
+  gap:clamp(12px,2.5vw,30px);
+  height:100%;
+  width:min(1280px,calc(100% - 112px));
+  margin-inline:auto;
+  overflow:visible;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.hero-bottom-strip .strip-phrase{
+  display:flex!important;
+  align-items:baseline;
+  gap:.42em;
+  white-space:nowrap;
+  font-size:clamp(15px,1.44vw,22px);
+  letter-spacing:.055em;
+  font-weight:800;
+  line-height:1.1;
+}
+.hero-bottom-strip .strip-left{justify-content:flex-start}
+.hero-bottom-strip .strip-right{justify-content:flex-end}
+.hero-bottom-strip .strip-for{
+  display:inline-block;
+  font-size:.62em;
+  font-weight:700;
+  letter-spacing:.16em;
+  opacity:.65;
+}
+.hero-bottom-strip .strip-axis{
+  display:flex!important;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(7px,1.2vw,18px);
+}
+.hero-bottom-strip .strip-axis-line{
+  display:block;
+  height:1px;
+  flex:1;
+  background:linear-gradient(90deg,transparent,rgba(16,40,28,.52));
+}
+.hero-bottom-strip .strip-axis-line:last-child{
+  background:linear-gradient(90deg,rgba(16,40,28,.52),transparent);
+}
+.hero-bottom-strip .strip-motif{
+  display:grid!important;
+  place-items:center;
+  flex:0 0 auto;
+  width:32px;height:32px;
+  font-size:27px;
+  line-height:1;
+  font-weight:400;
+  color:#173728;
+  animation:strip-rotate 14s linear infinite;
+  transform-origin:center;
+}
+@keyframes strip-rotate{to{transform:rotate(360deg)}}
+@media(max-width:780px){
+  .hero-bottom-strip{height:56px}
+  .hero-bottom-strip .strip-inner.strip-bidirectional{
+    width:calc(100% - 40px);
+    grid-template-columns:minmax(0,1fr) 38px minmax(0,1fr);
+    gap:6px;
+  }
+  .hero-bottom-strip .strip-phrase{
+    display:flex!important;
+    font-size:clamp(11px,2.5vw,16px);
+    gap:.34em;
+    letter-spacing:.015em;
+  }
+  .hero-bottom-strip .strip-axis{display:flex!important;gap:0}
+  .hero-bottom-strip .strip-axis-line{display:none}
+  .hero-bottom-strip .strip-motif{width:31px;height:31px;font-size:23px}
+}
+@media(max-width:390px){
+  .hero-bottom-strip .strip-inner.strip-bidirectional{width:calc(100% - 24px);grid-template-columns:minmax(0,1fr) 26px minmax(0,1fr);gap:3px}
+  .hero-bottom-strip .strip-phrase{font-size:clamp(10px,3vw,12px);letter-spacing:0}
+  .hero-bottom-strip .strip-motif{width:24px;height:24px;font-size:19px}
+}
+@media(prefers-reduced-motion:reduce){.hero-bottom-strip .strip-motif{animation:none}}
