@@ -141,7 +141,7 @@
         '<p class="wacana-brief-intro">'+esc(b.intro||'')+'</p>' +
         '<div class="wacana-brief-panels">' +
           '<section class="wacana-detail-panel"><h4>RINGKASAN KANDUNGAN</h4>'+list(b.content)+'</section>' +
-          '<section class="wacana-detail-panel outcomes"><h4>HASIL PEMBELAJARAN</h4>'+list(b.outcomes)+'</section>' +
+          '<section class="wacana-detail-panel outcomes"><h4>APLIKASI DALAM TUGAS</h4>'+list(b.outcomes)+'</section>' +
         '</div>' +
       '</div>' +
     '</article>';
