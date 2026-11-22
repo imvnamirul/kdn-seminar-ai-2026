@@ -244,7 +244,6 @@ img{max-width:100%;display:block}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 @media print{
  @page{size:A4;margin:15mm}body{background:#fff!important;color:#000!important;overflow:visible!important} .site-header,.scroll-progress,.back-top,.mobile-panel,.mobile-overlay,.modal-backdrop,.skip-link{display:none!important}
- body.print-agenda main>section:not(#aturcara){display:none!important}body.print-agenda .agenda-section{background:#fff!important;color:#000!important; padding:0!important}body.print-agenda .section-title,body.print-agenda .agenda-main h3,body.print-agenda .agenda-time{color:#000!important}body.print-agenda .section-title i,body.print-agenda .section-eyebrow,body.print-agenda .section-heading-aside span,body.print-agenda .agenda-main .agenda-kicker{color:#333!important}body.print-agenda .agenda-main p,body.print-agenda .agenda-speaker{color:#444!important}body.print-agenda .agenda-toolbar,body.print-agenda .agenda-note,body.print-agenda .inline-button,body.print-agenda .agenda-arrow{display:none!important}body.print-agenda .agenda-item{break-inside:avoid;border-bottom:1px solid #bbb!important;padding:11px 0!important}body.print-agenda .agenda-list{margin-top:20px}body.print-agenda .container{width:100%}body.print-agenda .section-heading-row{gap:15px}body.print-agenda .agenda-item.is-sesi{border-left:0!important}body.print-agenda .section-title{font-size:48px!important;margin-top:20px}body.print-agenda .agenda-main h3{font-size:17px!important}body.print-agenda .agenda-time{font-size:20px!important}
 }
 @media (max-width:350px){.contact-layout h2{font-size:51px}.contact-layout h2 i{letter-spacing:-.1em}}
 
@@ -912,4 +911,28 @@ img{max-width:100%;display:block}
   .intro-section .objective-label{font-size:13px}
   .intro-section .objective-item h4{font-size:23px}
   .intro-section .objective-item p{font-size:17px}
+}
+
+
+/* V15 — Official tentative: Wacana speaker names and roles */
+.agenda-section .agenda-speaker{
+  display:block;
+  font-size:clamp(13px,1.06vw,16px);
+  margin-top:13px;
+  color:#e1f0ce;
+  font-weight:700;
+  line-height:1.5;
+}
+.agenda-section .agenda-role{
+  display:block;
+  max-width:790px;
+  margin-top:3px;
+  font-size:clamp(12px,.96vw,14px);
+  line-height:1.6;
+  font-weight:450;
+  color:#bac9bc;
+}
+@media(max-width:780px){
+  .agenda-section .agenda-speaker{font-size:14px}
+  .agenda-section .agenda-role{font-size:12px}
 }
