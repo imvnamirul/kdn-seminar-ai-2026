@@ -229,8 +229,29 @@
     venueImg.removeAttribute('src');
     if (lastVenueTrigger) lastVenueTrigger.focus({preventScroll:true});
   });
-  $('#contactsGrid').innerHTML=(Array.isArray(d.contacts)?d.contacts:[]).map(c=>`<div class="contact-person"><span>${esc(c.role)}</span><h3>${esc(c.name)}</h3><a href="mailto:${esc(c.email)}">${esc(c.email)} ↗</a></div>`).join('');
-  if(d.officePhone){setText('#officePhone',d.officePhone);$('#officePhone').href='tel:'+d.officePhone.replace(/[^0-9+]/g,'');}
+  const contacts = Array.isArray(d.contacts) ? d.contacts : [];
+  const phoneHref = value => 'tel:' + String(value || '').replace(/[^0-9+]/g, '');
+  $('#contactsGrid').innerHTML = contacts.map((c,i) => `
+    <article class="contact-person">
+      <div class="contact-person-top"><span class="contact-person-no">${String(i+1).padStart(2,'0')}</span><span class="contact-person-role">${esc(c.role || 'Urus Setia Seminar')}</span></div>
+      <h3>${esc(c.name)}</h3>
+      <div class="contact-person-details">
+        ${c.phone ? `<div class="contact-detail"><span class="contact-detail-icon" aria-hidden="true">✆</span><div><span class="contact-detail-label">NO. TELEFON</span><a href="${phoneHref(c.phone)}">${esc(c.phone)}</a></div></div>` : ''}
+        ${c.email ? `<div class="contact-detail"><span class="contact-detail-icon" aria-hidden="true">✉</span><div><span class="contact-detail-label">EMEL</span><a href="mailto:${esc(c.email)}">${esc(c.email)}</a></div></div>` : ''}
+      </div>
+    </article>`).join('');
+
+  const office = d.office || {};
+  const officeAddress = Array.isArray(office.addressLines) ? office.addressLines : [];
+  $('#officeDetails').innerHTML = `
+    <span class="contact-office-kicker">PEJABAT PG / KDN</span>
+    <h3>${esc(office.name || 'Bahagian Perancangan Strategik (PG)')}<span>${esc(office.ministry || 'Kementerian Dalam Negeri')}</span></h3>
+    <address>${officeAddress.map(line => esc(line)).join('<br>')}</address>
+    <div class="contact-office-methods">
+      ${office.phone ? `<div><span>TEL</span><a href="${phoneHref(office.phone)}">${esc(office.phone)}</a></div>` : ''}
+      ${office.fax ? `<div><span>FAKS</span><strong>${esc(office.fax)}</strong></div>` : ''}
+      ${office.email ? `<div><span>E-MEL</span><a href="mailto:${esc(office.email)}">${esc(office.email)}</a></div>` : ''}
+    </div>`;
 
   // Mobile/tablet burger: drawer is hidden until clicked; close accessible above header.
   const overlay=$('#mobileOverlay'),panel=$('#mobilePanel'),openBtn=$('#menuOpen'),closeBtn=$('#menuClose');
