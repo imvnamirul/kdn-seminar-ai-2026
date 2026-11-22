@@ -553,3 +553,44 @@ img{max-width:100%;display:block}
   .hero-helvetica-line:nth-child(3){font-size:31px}
   #heroMessage .hero-ministry-script{font-size:36px!important}
 }
+
+
+/* V10 — Kementerian + Tahun 2026 on one line */
+#heroMessage.hero-ministry-lockup{
+  display:flex!important;
+  flex-direction:row!important;
+  flex-wrap:nowrap!important;
+  align-items:baseline!important;
+  justify-content:flex-start!important;
+  gap:clamp(6px,1.1vw,15px)!important;
+  width:100%;
+  max-width:930px!important;
+}
+#heroMessage .hero-ministry-script{
+  font-size:clamp(27px,3.35vw,53px)!important;
+  line-height:1.25!important;
+  white-space:nowrap!important;
+  flex:0 1 auto;
+}
+#heroMessage .hero-ministry-year{
+  margin:0!important;
+  font-size:clamp(13px,1.35vw,21px)!important;
+  line-height:1.25!important;
+  letter-spacing:.045em!important;
+  white-space:nowrap!important;
+  flex-shrink:0;
+}
+@media(max-width:780px){
+  #heroMessage.hero-ministry-lockup{gap:7px!important}
+  #heroMessage .hero-ministry-script{font-size:clamp(20px,3.9vw,31px)!important}
+  #heroMessage .hero-ministry-year{font-size:clamp(11px,2.25vw,16px)!important}
+}
+@media(max-width:480px){
+  #heroMessage.hero-ministry-lockup{gap:5px!important}
+  #heroMessage .hero-ministry-script{font-size:clamp(15px,4.1vw,20px)!important}
+  #heroMessage .hero-ministry-year{font-size:clamp(10px,2.65vw,12px)!important}
+}
+@media(max-width:350px){
+  #heroMessage .hero-ministry-script{font-size:14px!important}
+  #heroMessage .hero-ministry-year{font-size:9px!important}
+}
