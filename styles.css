@@ -1781,3 +1781,157 @@ img{max-width:100%;display:block}
 @media(min-width:701px) and (max-width:1050px){
   .seminar-venue-image{min-height:280px}
 }
+
+
+/* V23 / HUBUNGI KAMI — contact cards below Ada pertanyaan */
+#hubungi.contact-section{
+  position:relative;background:
+    radial-gradient(ellipse at 12% 15%,rgba(148,193,93,.09),transparent 39%),
+    linear-gradient(160deg,#171e19,#1b241d 55%,#151a16);
+  padding:100px 0 0;
+}
+#hubungi .contact-head{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  gap:40px;margin-bottom:48px;
+}
+#hubungi .contact-head-copy{max-width:850px}
+#hubungi .contact-overline{
+  font-size:10px;letter-spacing:.16em;font-weight:850;color:#d9ff83;
+}
+#hubungi .contact-head h2{
+  font-size:clamp(50px,6vw,87px);line-height:1.03;letter-spacing:-.085em;
+  font-weight:850;margin:26px 0 19px;color:#f5f9f1;
+}
+#hubungi .contact-head h2 i{color:var(--lime);font-style:normal}
+#hubungi .contact-head-copy p{
+  margin:0;max-width:680px;font-size:15px;color:#b5c4b5;line-height:1.75;
+}
+#hubungi .contact-head-aside{
+  display:flex;flex-direction:column;align-items:flex-end;
+  padding-bottom:10px;flex:none;
+}
+#hubungi .contact-head-aside>span{
+  color:#adbeaa;font-size:12px;letter-spacing:.19em;font-weight:850;
+}
+#hubungi .contact-head-aside strong{
+  font-size:clamp(36px,4.6vw,64px);line-height:1;letter-spacing:-.065em;font-weight:850;color:#f2f8eb;
+}
+#hubungi .contact-head-aside strong span{color:var(--lime)}
+#hubungi .contact-head-aside small{
+  color:#899d89;font-size:9px;letter-spacing:.15em;margin-top:12px;font-weight:800;
+}
+#hubungi .contact-section-heading{
+  display:flex;align-items:center;justify-content:space-between;gap:15px;
+  border-top:1px solid #55634f;padding:15px 0 20px;
+  font-size:10px;letter-spacing:.14em;color:#cde4b5;font-weight:850;
+}
+#hubungi .contact-section-heading>span:last-child{color:#92a28c}
+#hubungi .contact-people{
+  border:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;
+}
+#hubungi .contact-person{
+  min-width:0;min-height:340px;display:flex;flex-direction:column;
+  background:linear-gradient(145deg,#2d4634,#223829);
+  border:1px solid #4f6b4d;border-top:3px solid #d9ff83;
+  border-radius:10px;padding:26px 24px 24px;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+#hubungi .contact-person:nth-child(2){border-top-color:#e6d59d}
+#hubungi .contact-person:hover{
+  transform:translateY(-3px);border-color:#a9d78d;
+  box-shadow:0 16px 36px rgba(0,0,0,.15);
+}
+#hubungi .contact-person-top{display:flex;align-items:center;gap:11px}
+#hubungi .contact-person-no{
+  display:grid;place-items:center;width:38px;height:38px;flex:none;
+  border:1px solid #759775;border-radius:8px;background:#324e39;
+  color:#d9ff83;font-size:12px;letter-spacing:0;font-weight:850;
+}
+#hubungi .contact-person-role{
+  color:#c2d0b7;font-size:9px;letter-spacing:.1em;font-weight:830;
+}
+#hubungi .contact-person h3{
+  font-size:clamp(18px,1.8vw,24px);line-height:1.24;letter-spacing:-.055em;
+  color:#f8fcf5;font-weight:810;margin:23px 0 20px;
+  overflow-wrap:break-word;
+}
+#hubungi .contact-person-details{
+  border-top:1px solid #60735e;padding-top:19px;
+  display:flex;flex-direction:column;gap:18px;margin-top:auto;
+}
+#hubungi .contact-detail{display:flex;align-items:flex-start;gap:12px;min-width:0}
+#hubungi .contact-detail-icon{
+  width:35px;height:35px;flex:none;display:grid;place-items:center;
+  border:1px solid #6c8e6f;border-radius:8px;background:#314d39;
+  color:#d9ff83;font-size:18px;letter-spacing:0;
+}
+#hubungi .contact-detail>div{min-width:0;display:flex;flex-direction:column;gap:5px}
+#hubungi .contact-detail-label{
+  color:#9fbb9b;font-size:9px;letter-spacing:.1em;font-weight:830;
+}
+#hubungi .contact-detail a{
+  font-size:clamp(12px,1.2vw,15px);font-weight:730;line-height:1.48;
+  border:0;padding:0;color:#e4f4db;overflow-wrap:anywhere;
+  letter-spacing:0;
+}
+#hubungi .contact-detail a:hover{color:var(--lime)}
+#hubungi .contact-office-wrap{margin-top:42px;padding-bottom:83px}
+#hubungi .contact-office-card{
+  margin:0 auto;max-width:940px;padding:35px clamp(22px,5vw,54px) 37px;
+  background:linear-gradient(130deg,#28422f,#213728);
+  border:1px solid #648563;border-top:4px solid var(--lime);
+  border-radius:10px;text-align:center;color:#f5f9f0;
+}
+#hubungi .contact-office-kicker{
+  color:#d9ff83;font-size:10px;letter-spacing:.14em;font-weight:850;
+}
+#hubungi .contact-office-card h3{
+  margin:15px auto 17px;max-width:720px;
+  font-size:clamp(22px,2.5vw,33px);font-weight:850;line-height:1.2;
+  letter-spacing:-.06em;text-transform:uppercase;
+}
+#hubungi .contact-office-card h3 span{display:block}
+#hubungi .contact-office-card address{
+  font-style:normal;line-height:1.85;font-size:13px;
+  color:#c8d5c5;font-weight:550;
+}
+#hubungi .contact-office-methods{
+  border-top:1px solid #557256;margin-top:23px;padding-top:21px;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;
+}
+#hubungi .contact-office-methods>div{min-width:0;display:flex;flex-direction:column;gap:8px;align-items:center}
+#hubungi .contact-office-methods>div>span{
+  font-size:9px;color:#a6c6a4;letter-spacing:.13em;font-weight:850;
+}
+#hubungi .contact-office-methods strong,
+#hubungi .contact-office-methods a{
+  font-weight:780;color:#eaffd4;font-size:clamp(11px,1.25vw,15px);
+  overflow-wrap:anywhere;text-decoration:none;
+}
+#hubungi .contact-office-methods a:hover{color:#d9ff83;text-decoration:underline}
+@media(max-width:1100px){
+  #hubungi .contact-head-aside{display:none}
+  #hubungi .contact-people{gap:12px}
+  #hubungi .contact-person{padding:22px 18px;min-height:345px}
+  #hubungi .contact-person h3{font-size:20px}
+  #hubungi .contact-detail a{font-size:12px}
+}
+@media(max-width:780px){
+  #hubungi.contact-section{padding-top:72px}
+  #hubungi .contact-head{margin-bottom:35px}
+  #hubungi .contact-people{grid-template-columns:1fr;gap:13px}
+  #hubungi .contact-person{min-height:0;padding:21px 23px 23px}
+  #hubungi .contact-person h3{font-size:23px;margin:16px 0 16px}
+  #hubungi .contact-person-details{margin-top:0;gap:14px;padding-top:15px}
+  #hubungi .contact-detail a{font-size:14px}
+  #hubungi .contact-office-methods{grid-template-columns:1fr;gap:16px}
+  #hubungi .contact-office-methods>div{gap:4px}
+  #hubungi .contact-office-card h3{font-size:23px}
+  #hubungi .contact-office-wrap{padding-bottom:62px}
+}
+@media(max-width:420px){
+  #hubungi .contact-head h2{font-size:clamp(46px,12vw,64px)}
+  #hubungi .contact-section-heading{font-size:9px;letter-spacing:.05em}
+  #hubungi .contact-person h3{font-size:21px}
+  #hubungi .contact-office-card{padding:27px 16px}
+}
