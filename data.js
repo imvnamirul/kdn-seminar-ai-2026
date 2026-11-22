@@ -38,16 +38,18 @@ window.SEMINAR = {
   // Mengikut tentatif program bertarikh 21 November 2026.
   // Tiada aktiviti dinyatakan dalam tentatif bagi 08:30–09:00.
 
+
 agenda: [
-  {
-    time:'08:00',
-    end:'08:30',
-    type:'urusetia',
-    kicker:'Ketibaan',
-    title:'Pendaftaran Peserta dan Sarapan',
-    description:'',
-    speaker:''
-  },
+ {
+  time:'08:00',
+  end:'09:00',
+  type:'urusetia',
+  kicker:'Ketibaan',
+  title:'Pendaftaran Peserta dan Sarapan',
+  description:'',
+  speaker:''
+},
+
   {
     time:'09:00',
     end:'09:00',
@@ -64,7 +66,8 @@ agenda: [
     kicker:'Perasmian',
     title:'Ucapan Perasmian',
     description:'',
-    speaker:''
+    speaker:'YBrs. Puan Siti Salmiah Binti Haji Dimyati',
+    role:'Setiausaha Bahagian, Bahagian Perancangan Strategik'
   },
   {
     time:'09:15',
@@ -106,15 +109,16 @@ agenda: [
     role:'Senior Analyst, Unit Kecerdasan Buatan (AI), CyberSecurity Malaysia'
   },
   {
-    time:'13:00',
+    time:'12:35',
     end:'13:00',
     type:'urusetia',
-    kicker:'Jamuan',
-    title:'Makan Tengahari',
+    kicker:'Penutup',
+    title:'Makan Tengah Hari dan Bersurai',
     description:'',
     speaker:''
   }
 ],
+
 
   sessions: [
     { code:'01', topic:'DATA / KEPUTUSAN', title:'Konsep Penggunaan Data Dalam Pembuatan Keputusan', description:'Perkongsian mengenai konsep penggunaan data dalam pembuatan keputusan.', speaker:'Encik Mohamad Zafir Bin Nadzri', role:'Pembantu Penyelidik, Institut Penyelidikan Perakaunan (ARI), Universiti Teknologi MARA (UiTM)', photo:'assets/wacana1_zafir.webp', bio:'• 5 tahun pengalaman dalam pembangunan sistem dan AI.\n• Kepakaran: fine-tuning LLM, deep learning, agentic AI dan sistem multi-agent.\n• Hasil kerja: chatbot, RAG dan platform pengurusan kerja (Work OS).\n• Terlibat dalam pembangunan sistem IKKA, KDN.', tags:['Penggunaan Data','Pembuatan Keputusan','Pembangunan AI'] },
