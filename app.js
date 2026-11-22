@@ -64,6 +64,11 @@
   const sessions = Array.isArray(d.sessions) ? d.sessions : [];
   $('#sessionsGrid').innerHTML = sessions.map((s,i) => {
     const index = esc(s.code || String(i+1).padStart(2,'0'));
+    const roleText = s.role || 'Maklumat jawatan akan dimaklumkan';
+    const roleParts = roleText.split(/,\s*/).map(p => p.trim()).filter(Boolean);
+    const roleHtml = roleParts.map((part,j) =>
+      '<span class="speaker-role-line">'+esc(part)+(j < roleParts.length-1 ? ',' : '')+'</span>'
+    ).join('');
     const image = s.photo && isUrl(s.photo)
       ? '<img class="speaker-card-portrait" src="'+esc(s.photo)+'" alt="Potret '+esc(s.speaker)+'" loading="lazy" decoding="async">'
       : '<div class="speaker-card-awaiting" aria-label="Foto penceramah belum tersedia"><span>'+index+'</span><small>FOTO PENCERAMAH<br>AKAN DIKEMAS KINI</small></div>';
@@ -72,7 +77,7 @@
       +'<div class="speaker-profile-rule"></div>'
       +'<div class="speaker-profile-copy">'
       +'<h3 class="speaker-profile-name">'+esc(s.speaker)+'</h3>'
-      +'<div class="speaker-profile-role">'+esc(s.role||'Maklumat jawatan akan dimaklumkan')+'</div>'
+      +'<div class="speaker-profile-role" aria-label="'+esc(roleText)+'">'+roleHtml+'</div>'
       +'<div class="speaker-profile-talk"><span>TAJUK WACANA</span><p>'+esc(s.title)+'</p></div>'
       +'<div class="speaker-profile-footer"><span>PROFIL PENCERAMAH</span><button class="details-button" type="button" data-open-session="'+i+'" aria-label="Lihat profil '+esc(s.speaker)+'">↗</button></div>'
       +'</div></article>';
