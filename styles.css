@@ -936,3 +936,48 @@ img{max-width:100%;display:block}
   .agenda-section .agenda-speaker{font-size:14px}
   .agenda-section .agenda-role{font-size:12px}
 }
+
+
+/* V16 / Official speaker profiles and transparent Wacana portraits */
+.sessions-section .section-heading-row{align-items:flex-end}
+.sessions-section .section-title{letter-spacing:-.07em}
+.sessions-section .session-title-stop{color:#8ca357}
+.session-glyph.has-portrait{
+  position:relative;
+  height:190px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+  margin:8px 0 14px;
+  overflow:hidden;
+  isolation:isolate;
+}
+.session-glyph.has-portrait:before{
+  content:"";
+  position:absolute;
+  left:8%;right:8%;bottom:0;height:82%;
+  border-radius:150px 150px 0 0;
+  background:radial-gradient(ellipse at 50% 80%,rgba(155,184,128,.25),transparent 70%);
+  z-index:-1;
+}
+.session-glyph.has-portrait .speaker-portrait{
+  display:block;
+  width:auto;
+  max-width:94%;
+  height:100%;
+  object-fit:contain;
+  object-position:center bottom;
+  filter:drop-shadow(0 8px 12px rgba(18,32,25,.13));
+}
+.session-grid .session-card:has(.has-portrait) .session-code{opacity:.48}
+.speaker-bio{
+  white-space:pre-line;
+  font-size:14px;
+  line-height:1.75;
+}
+@media(max-width:780px){
+  .session-glyph.has-portrait{height:196px;margin-top:10px}
+}
+@media(max-width:390px){
+  .session-glyph.has-portrait{height:180px}
+}
