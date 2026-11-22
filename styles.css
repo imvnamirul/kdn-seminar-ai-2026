@@ -1935,3 +1935,62 @@ img{max-width:100%;display:block}
   #hubungi .contact-person h3{font-size:21px}
   #hubungi .contact-office-card{padding:27px 16px}
 }
+
+
+/* V24 — ALTERNATING SECTION BACKGROUNDS */
+/*
+   Visual rhythm, top to bottom:
+   Hero          DARK
+   Pengenalan    LIGHT
+   Atur Cara     DARK
+   Penceramah    LIGHT
+   Slogan strip  DARK
+   Ringkasan     LIGHT
+   Lokasi        DARK
+   Waktu Solat   LIGHT
+   Hubungi Kami  DARK
+   Preserve existing panels, portrait cards, images and responsive layouts.
+*/
+#utama.hero{
+  background-color:#171e19;
+}
+#tentang.intro-section{
+  background:#fafaf6;
+  color:#1b271e;
+}
+#aturcara.agenda-section{
+  background:
+    radial-gradient(ellipse at 94% 9%,rgba(153,197,111,.075),transparent 40%),
+    linear-gradient(148deg,#1b241e 0%,#233027 62%,#1b241e 100%);
+  color:#f8faf5;
+}
+#sesi.sessions-section{
+  background:#f2f5ee;
+  color:#202b21;
+}
+/* Treat the editorial slogan strip as a true dark transition. */
+.manifesto-band{
+  background:#1a291f;
+  color:#eef8df;
+  border-top:1px solid #3d5440;
+  border-bottom:1px solid #3d5440;
+}
+.manifesto-inner .manifesto-star{color:#d9ff83}
+#bahan.wacana-library-section{
+  background:#fafaf6;
+  color:#202b21;
+}
+#lokasi.location-section{
+  background:
+    radial-gradient(ellipse at 90% 8%,rgba(139,185,91,.10),transparent 36%),
+    linear-gradient(145deg,#1b2920 0%,#24352a 54%,#1b2920 100%);
+  color:#f8faf5;
+}
+#solat.prayer-section{
+  background:
+    radial-gradient(ellipse at 92% 8%,rgba(183,210,155,.21),transparent 38%),
+    #f5f7ef;
+  color:#1b271e;
+}
+/* The contact section already has a curated deep-green gradient (V23).
+   Keep that gradient and the contact card contrast unchanged. */
