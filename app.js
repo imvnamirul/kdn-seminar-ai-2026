@@ -211,7 +211,7 @@
   // Venue photo lightbox uses the native modal dialog, above the sticky header.
   const venueDialog = $('#venuePhotoDialog'), venueImg = $('#venuePhotoImage');
   let lastVenueTrigger = null;
-  $('.seminar-venue-image').forEach(btn => btn.addEventListener('click', () => {
+  $$('.seminar-venue-image').forEach(btn => btn.addEventListener('click', () => {
     const src = btn.dataset.venuePhoto;
     if (!isUrl(src) || !venueDialog || !venueImg) return;
     lastVenueTrigger = btn;
