@@ -594,3 +594,66 @@ img{max-width:100%;display:block}
   #heroMessage .hero-ministry-script{font-size:14px!important}
   #heroMessage .hero-ministry-year{font-size:9px!important}
 }
+
+
+/* V11 — Hero programme details: larger text and wider 3-column row */
+.hero-meta{
+  width:calc(100% + clamp(0px,5vw,100px));
+  max-width:none!important;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  margin-top:69px;
+}
+.hero-meta .meta-cell{
+  padding-top:26px;
+  padding-bottom:8px;
+  gap:11px;
+}
+.hero-meta .meta-cell:not(:first-child){
+  padding-left:32px;
+}
+.hero-meta .meta-index{
+  font-size:12px;
+  line-height:1.4;
+  letter-spacing:.14em;
+}
+.hero-meta .meta-cell strong{
+  font-size:clamp(21px,1.45vw,25px);
+  line-height:1.35;
+  letter-spacing:-.035em;
+  font-weight:760;
+}
+.hero-meta .meta-cell small{
+  font-size:12px;
+  line-height:1.4;
+  letter-spacing:.055em;
+  font-weight:700;
+}
+@media (max-width:1080px){
+  .hero-meta{width:100%;max-width:none!important}
+  .hero-meta .meta-cell{padding-top:20px;padding-bottom:9px}
+  .hero-meta .meta-cell strong{font-size:clamp(17px,2.25vw,23px)}
+  .hero-meta .meta-cell:not(:first-child){padding-left:18px}
+}
+@media (max-width:640px){
+  .hero-meta{
+    width:100%;
+    grid-template-columns:1fr;
+    margin-top:39px;
+  }
+  .hero-meta .meta-cell{
+    padding:18px 0!important;
+    gap:6px 12px;
+  }
+  .hero-meta .meta-cell .meta-index{
+    font-size:11px;
+    line-height:1.4;
+  }
+  .hero-meta .meta-cell strong{
+    font-size:18px;
+    line-height:1.4;
+  }
+  .hero-meta .meta-cell small{
+    font-size:11px;
+    line-height:1.4;
+  }
+}
