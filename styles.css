@@ -2064,3 +2064,25 @@ img{max-width:100%;display:block}
   #solat .prayer-footnote{color:#333}
   #solat .prayer-card-featured{background:#e4eccf}
 }
+
+
+/* V28 — SPEAKER ROLE LINE BREAKS AFTER COMMAS */
+/* Keep each position/institution between commas on its own line. */
+.sessions-section .speaker-profile-role{
+  font-size:clamp(10px,.9vw,12px);
+  line-height:1.6;
+  padding:12px 11px;
+}
+.sessions-section .speaker-role-line{
+  display:block;
+  white-space:nowrap;
+}
+.sessions-section .speaker-role-line + .speaker-role-line{
+  margin-top:2px;
+}
+@media(max-width:640px){
+  .sessions-section .speaker-profile-role{
+    font-size:clamp(10px,2.75vw,12px);
+    padding:11px 9px;
+  }
+}
