@@ -1056,3 +1056,77 @@ img{max-width:100%;display:block}
   .speaker-profile-role{font-size:13px}
   .speaker-profile-talk p{font-size:15px}
 }
+
+
+/* ============================================================
+   V17 — ORIGINAL SEMINAR PALETTE / SPEAKER CARDS ONLY
+   Retain speaker-first photo layout; remove the borrowed blue.
+   Theme: deep charcoal, muted sage, warm ivory, KDN lime.
+   ============================================================ */
+.sessions-section .speaker-profile-card,
+.sessions-section .speaker-profile-card:nth-child(2),
+.sessions-section .speaker-profile-card:nth-child(3){
+  background:linear-gradient(160deg,#303d32 0%,#222d26 47%,#19231e 100%);
+  color:#f4f6ec;
+  border-color:#556c56;
+  box-shadow:0 16px 40px rgba(18,31,21,.12);
+}
+.sessions-section .speaker-profile-card:hover{
+  box-shadow:0 25px 52px rgba(18,31,21,.22);
+}
+.sessions-section .speaker-profile-visual{
+  background:
+    radial-gradient(ellipse at 50% 84%,rgba(193,225,146,.16),transparent 54%),
+    linear-gradient(135deg,#425444 0%,#314334 54%,#28382d 100%);
+}
+.sessions-section .speaker-wacana-tag{
+  background:rgba(22,35,27,.86);
+  border-color:rgba(218,255,119,.36);
+  color:#f5f9ed;
+}
+.sessions-section .speaker-card-portrait{
+  filter:drop-shadow(0 10px 23px rgba(9,19,12,.24));
+}
+.sessions-section .speaker-card-awaiting{
+  color:#d8e4cf;
+}
+.sessions-section .speaker-card-awaiting>span{
+  color:rgba(228,242,206,.15);
+}
+.sessions-section .speaker-card-awaiting small{
+  color:#d3dfc9;
+}
+.sessions-section .speaker-profile-rule{
+  background:linear-gradient(90deg,#d9ff83 0%,#a6bf80 55%,#70856d 100%);
+}
+.sessions-section .speaker-profile-name{
+  color:#f9faf2;
+}
+.sessions-section .speaker-profile-role{
+  background:rgba(161,190,134,.13);
+  border-left-color:#d9ff83;
+  color:#edf4e5;
+}
+.sessions-section .speaker-profile-talk{
+  border-top-color:rgba(216,234,207,.20);
+}
+.sessions-section .speaker-profile-talk>span{
+  color:#d9ff83;
+}
+.sessions-section .speaker-profile-talk p{
+  color:#f2f6eb;
+}
+.sessions-section .speaker-profile-footer{
+  border-top-color:rgba(216,234,207,.18);
+}
+.sessions-section .speaker-profile-footer>span{
+  color:#bcccaf;
+}
+.sessions-section .speaker-profile-footer .details-button{
+  color:#d9ff83;
+  border-color:rgba(217,255,131,.52);
+}
+.sessions-section .speaker-profile-footer .details-button:hover{
+  background:#d9ff83;
+  color:#1c2c20;
+}
