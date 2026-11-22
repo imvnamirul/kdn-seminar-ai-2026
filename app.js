@@ -70,7 +70,7 @@
   $('#sessionsGrid').innerHTML = sessions.map((s,i) => `<article class="session-card">
     <div class="session-card-top"><span>WACANA / ${esc(s.code || String(i+1).padStart(2,'0'))}</span><span>↗</span></div>
     <span class="session-code" aria-hidden="true">${esc(s.code)}</span>
-    <div class="session-glyph">${shapes[i % shapes.length]}</div>
+    <div class="session-glyph ${s.photo && isUrl(s.photo) ? 'has-portrait' : ''}">${s.photo && isUrl(s.photo) ? `<img class="speaker-portrait" src="${esc(s.photo)}" loading="lazy" alt="Potret ${esc(s.speaker)}">` : shapes[i % shapes.length]}</div>
     <div class="session-card-body"><span class="session-card-topic">${esc(s.topic)}</span><h3>${esc(s.title)}</h3><p class="session-card-desc">${esc(s.description)}</p><div class="session-footer"><span>${esc(s.speaker)}</span><button class="details-button" type="button" data-open-session="${i}" aria-label="Lihat butiran sesi ${i+1}">↗</button></div></div>
   </article>`).join('');
 
@@ -80,7 +80,7 @@
   function openModal(index, trigger) {
     const s = sessions[index]; if(!s) return;
     modalTrigger = trigger;
-    setText('#modalKicker',`SESI / ${s.code}`);setText('#modalCode',s.code);setText('#modalTopic',s.topic);
+    setText('#modalKicker',`WACANA / ${s.code}`);setText('#modalCode',s.code);setText('#modalTopic',s.topic);
     setText('#modalTitle',s.title);setText('#modalDescription',s.description);
     setText('#modalSpeaker',s.speaker);setText('#modalRole',s.role);setText('#modalBio',s.bio);
     $('#modalTags').innerHTML = (s.tags || []).map(t=>`<span>${esc(t)}</span>`).join('');
