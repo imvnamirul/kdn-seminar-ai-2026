@@ -18,7 +18,7 @@ window.SEMINAR = {
   venue: 'Silk Hall, Level 1',
   room: 'Zenith Hotel, Putrajaya',
   address: 'Aras 1, Zenith Hotel, Putrajaya',
-  mapUrl: '',                 // Isi pautan Google Maps apabila tempat disahkan
+  mapUrl: 'https://www.google.com/maps/search/?api=1&query=Zenith+Hotel+Putrajaya',
   organiser: 'Bahagian Perancangan Strategik (PG)',
   officialUrl: 'https://www.moha.gov.my/',
   registration: {
@@ -58,14 +58,14 @@ window.SEMINAR = {
       pdf:'bahan/wacana-01.pdf',
       intro:'Memahami bagaimana data dinilai dan diterjemahkan menjadi keputusan yang lebih tepat, berasaskan contoh serta pengalaman pembangunan sistem IKKA di KDN.',
       content:[
-        'Rantaian data → ukuran → tafsiran → keputusan: data perlu tepat, lengkap dan tersedia pada masa yang diperlukan.',
-        'Risiko data dan maklumat apabila menggunakan aplikasi digital serta chatbot AI; kepentingan kawalan dan pengelasan data.',
-        'Empat tahap analitik — deskriptif, diagnostik, prediktif dan preskriptif — serta pengalaman sistem IKKA.'
+        'Bagaimana data mentah ditukar kepada ukuran, tafsiran dan maklumat yang boleh menyokong keputusan.',
+        'Empat lapisan analitik: deskriptif (apa berlaku), diagnostik (mengapa), prediktif (apa mungkin berlaku) dan preskriptif (apa tindakan terbaik).',
+        'Contoh pembangunan sistem IKKA serta isu kualiti, integriti dan keselamatan data dalam persekitaran kerja KDN.'
       ],
       outcomes:[
-        'Menilai kualiti serta konteks data sebelum membuat kesimpulan atau keputusan.',
-        'Mengenal pasti data rasmi yang tidak wajar dikongsi melalui alat AI tanpa kelulusan.',
-        'Menggunakan soalan analitik yang betul untuk menyokong pertimbangan dasar dan operasi.'
+        'Mulakan tugasan analisis dengan menyatakan keputusan yang hendak dibuat dan bukti yang diperlukan.',
+        'Pilih jenis analitik yang sesuai dengan soalan kerja, bukan terus menghasilkan graf atau angka tanpa konteks.',
+        'Semak sumber serta ketepatan dapatan dan asingkan maklumat terperingkat sebelum menggunakan mana-mana alat AI.'
       ]
     },
     {
@@ -73,14 +73,14 @@ window.SEMINAR = {
       partPrefix:'bahan/wacana-02.part', partCount:10,
       intro:'Meneroka potensi AI dalam meningkatkan kecekapan agensi KDN sambil memahami ancaman, risiko serta keperluan keselamatan siber dan tadbir urus AI yang bertanggungjawab.',
       content:[
-        'Peluang penggunaan AI untuk produktiviti, analisis dan sokongan tugas harian atau operasi agensi.',
-        'Risiko keselamatan siber yang wujud dan diperkasa oleh AI, termasuk pendedahan maklumat serta penyalahgunaan teknologi.',
-        'Keperluan memperkukuh kesedaran keselamatan, disiplin penggunaan AI dan akauntabiliti warga KDN.'
+        'Potensi AI membantu pemprosesan maklumat, automasi dan pengesanan ancaman dalam persekitaran organisasi.',
+        'Ancaman terhadap sistem dan data: kebocoran maklumat, penyalahgunaan model serta kelemahan kawalan akses.',
+        'Prinsip tadbir urus dan jaminan keselamatan AI, termasuk kepentingan kerangka keselamatan AI (AISCF).'
       ],
       outcomes:[
-        'Mengenal pasti kes penggunaan AI yang bermanfaat dengan kawalan keselamatan yang sesuai.',
-        'Memahami risiko kepada data, sistem dan proses membuat keputusan apabila menggunakan AI.',
-        'Mempraktikkan penggunaan AI yang beretika, menyemak maklumat dan melaporkan insiden mencurigakan.'
+        'Tapis cadangan penggunaan AI berdasarkan sensitiviti data, kesesuaian tujuan dan keperluan kelulusan.',
+        'Tetapkan kawalan manusia, hak akses dan semakan output sebelum AI digunakan untuk menyokong keputusan rasmi.',
+        'Laporkan tingkah laku sistem atau permintaan maklumat yang mencurigakan melalui saluran keselamatan organisasi.'
       ]
     },
     {
@@ -88,14 +88,14 @@ window.SEMINAR = {
       partPrefix:'bahan/wacana-03.part', partCount:9,
       intro:'Menjelaskan bagaimana AI mempercepat jenayah digital dan pemalsuan identiti, serta langkah mengesahkan maklumat, melindungi dokumen dan memelihara integriti bukti.',
       content:[
-        'Deepfake, suara klon, jenayah siber sebagai perkhidmatan (CaaS) dan penipuan yang menyamar sebagai pihak berautoriti.',
-        'Pemalsuan dokumen dan biometrik, manipulasi maklumat serta cabaran mengesahkan ketulenan bukti digital.',
-        'Risiko model dan agen AI, prompt injection serta implikasi keselamatan kepada agensi penguatkuasaan.'
+        'Modus operandi penipuan berasaskan AI: deepfake, pengklonan suara dan jenayah siber sebagai perkhidmatan (CaaS).',
+        'Manipulasi identiti melalui dokumen palsu, penyamaran biometrik dan kandungan audio-visual yang direka.',
+        'Ancaman terhadap model dan ejen AI seperti prompt injection serta cabaran integriti bukti dalam forensik digital.'
       ],
       outcomes:[
-        'Mengecam modus operandi penipuan AI dan tanda amaran pada video, audio serta dokumen.',
-        'Mengesahkan identiti, arahan dan maklumat melalui saluran rasmi yang berasingan.',
-        'Mengamalkan langkah SEMAK, SAHKAN, LINDUNGI dan LAPORKAN apabila berdepan ancaman AI.'
+        'Jangan luluskan transaksi atau arahan mendesak hanya berdasarkan rakaman suara atau video; hubungi pengirim melalui saluran berasingan.',
+        'Kekalkan fail asal, rekod komunikasi dan butiran kejadian apabila menemui bahan digital yang disyaki dimanipulasi.',
+        'Gunakan rutin SEMAK → SAHKAN → LINDUNGI → LAPORKAN sebelum berkongsi maklumat atau bertindak atas arahan mencurigakan.'
       ]
     }
   ],
@@ -103,11 +103,6 @@ window.SEMINAR = {
     { name:'Cik Siti Hanizah Binti Tupani', role:'Urus Setia Seminar', email:'sitihanizah@moha.gov.my' },
     { name:'Encik Amirul Iman Bin Md Nizam', role:'Urus Setia Seminar', email:'amiruliman@moha.gov.my' }
   ],
-  officePhone: '03-8886 3299',
-  faq: [
-    { q:'Siapakah yang boleh menyertai seminar ini?', a:'Seminar ini dirancang untuk warga Kementerian Dalam Negeri serta jabatan dan agensi berkaitan, tertakluk kepada jemputan urus setia.' },
-    { q:'Bagaimana untuk mengesahkan kehadiran?', a:'Pengesahan kehadiran adalah berdasarkan saluran yang dimaklumkan dalam jemputan rasmi. Hubungi urus setia untuk semakan lanjut.' },
-    { q:'Adakah bahan pembentangan disediakan?', a:'Bahan perkongsian, jika dibenarkan oleh penceramah, akan dipaparkan pada bahagian Bahan Seminar selepas disahkan oleh urus setia.' },
-    { q:'Apakah peralatan yang perlu dibawa?', a:'Sila rujuk arahan urus setia. Peranti peribadi boleh dibawa jika diperlukan, dengan mengambil kira dasar keselamatan maklumat tempat kerja.' }
-  ]
+  officePhone: '03-8886 3299'
+
 };
