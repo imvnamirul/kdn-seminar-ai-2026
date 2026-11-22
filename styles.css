@@ -1130,3 +1130,220 @@ img{max-width:100%;display:block}
   background:#d9ff83;
   color:#1c2c20;
 }
+
+
+/* ============================================================
+   V18 — PENCERAMAH PROFILE MODAL / KDN SEMINAR THEME
+   Portrait and speaker-first details, warm ivory + sage green.
+   ============================================================ */
+.modal-backdrop .modal-profile-dialog{
+  width:min(725px,100%);
+  max-height:min(850px,calc(100dvh - 24px));
+  background:#fbfcf8;
+  color:#202b22;
+  border-radius:12px;
+  border:1px solid rgba(188,202,177,.42);
+  box-shadow:0 32px 96px rgba(2,13,6,.50);
+  overflow:hidden;
+  isolation:isolate;
+}
+.modal-profile-dialog .modal-close{
+  position:absolute;
+  z-index:10;
+  top:16px;
+  right:16px;
+  display:grid;
+  place-items:center;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:1px solid rgba(218,255,119,.22);
+  background:#223729;
+  color:#d9ff83;
+  font-size:24px;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 5px 18px rgba(17,35,23,.18);
+}
+.modal-profile-dialog .modal-close:hover,
+.modal-profile-dialog .modal-close:focus-visible{
+  background:#304e34;
+  outline:2px solid #b7e56d;
+  outline-offset:2px;
+}
+.modal-profile-dialog .modal-scroll{
+  padding:0;
+  min-height:0;
+  width:100%;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scrollbar-color:#a5b99e #edf2e9;
+}
+.modal-profile-header{
+  display:grid;
+  grid-template-columns:168px minmax(0,1fr);
+  align-items:center;
+  gap:26px;
+  padding:30px 74px 29px 38px;
+  background:linear-gradient(125deg,#e6ede2 0%,#eef2e9 58%,#f2f5ed 100%);
+  border-bottom:1px solid #dbe5d6;
+  min-height:244px;
+}
+.modal-photo-frame{
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+  width:168px;
+  height:190px;
+  flex:none;
+  border-radius:4px;
+  overflow:hidden;
+  background:radial-gradient(ellipse at 50% 72%,#d9e5d1 0%,#edf2e7 68%,#f1f5eb 100%);
+  border:1px solid rgba(118,151,112,.18);
+  color:#79906e;
+}
+.modal-photo-frame img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center bottom;
+  filter:drop-shadow(0 8px 10px rgba(22,41,26,.13));
+}
+.modal-portrait-placeholder{
+  align-self:stretch;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  text-align:center;
+  padding:13px;
+}
+.modal-portrait-placeholder span{
+  font-size:67px;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-.09em;
+  color:#b4c5ac;
+}
+.modal-portrait-placeholder small{
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.08em;
+  color:#6e856c;
+  line-height:1.55;
+}
+.modal-profile-identity{min-width:0}
+.modal-profile-kicker{
+  display:block;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.115em;
+  color:#71894f;
+  margin-bottom:11px;
+}
+.modal-profile-dialog .modal-profile-identity h2{
+  margin:0 0 13px;
+  font-size:clamp(23px,3vw,30px);
+  font-weight:800;
+  line-height:1.2;
+  letter-spacing:-.052em;
+  color:#1f2c21;
+  overflow-wrap:break-word;
+}
+.modal-profile-role{
+  margin:0;
+  width:100%;
+  padding:12px 14px;
+  border-left:3px solid #9cbf63;
+  border-radius:0 6px 6px 0;
+  background:#dce7d7;
+  color:#36523b;
+  font-size:13px;
+  font-weight:700;
+  line-height:1.55;
+}
+.modal-profile-content{
+  padding:30px 39px 39px;
+  background:#fbfcf8;
+}
+.modal-info-block + .modal-info-block{margin-top:25px}
+.modal-profile-dialog .modal-info-block .modal-label{
+  display:block;
+  margin:0 0 9px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.12em;
+  line-height:1.45;
+  color:#82916c;
+}
+.modal-profile-dialog .modal-info-block h3{
+  font-size:clamp(20px,2.7vw,26px);
+  font-weight:760;
+  line-height:1.36;
+  letter-spacing:-.046em;
+  color:#1e2a22;
+  margin:0;
+}
+.modal-profile-dialog .modal-info-block p{
+  margin:0;
+  font-size:15px;
+  line-height:1.8;
+  font-weight:400;
+  color:#5a6c60;
+}
+.modal-profile-dialog .speaker-bio{
+  margin:0;
+  font-size:15px;
+  line-height:1.75;
+  color:#53675b;
+  white-space:normal;
+}
+.modal-profile-dialog .speaker-bio p{
+  font-size:15px;
+  line-height:1.8;
+}
+.modal-profile-dialog .modal-bio-list{
+  margin:0;
+  padding-left:20px;
+  display:grid;
+  gap:8px;
+  color:#53675b;
+  list-style:disc;
+}
+.modal-profile-dialog .modal-bio-list li{
+  font-size:15px;
+  line-height:1.65;
+  padding-left:3px;
+}
+.modal-profile-dialog .modal-bio-list li::marker{color:#7f9d5a}
+@media(max-width:640px){
+  .modal-backdrop{padding:10px}
+  .modal-backdrop .modal-profile-dialog{max-height:calc(100dvh - 20px)}
+  .modal-profile-header{
+    grid-template-columns:124px minmax(0,1fr);
+    gap:16px;
+    padding:52px 18px 20px;
+    min-height:190px;
+  }
+  .modal-photo-frame{width:124px;height:153px}
+  .modal-profile-dialog .modal-profile-identity h2{font-size:22px;margin-bottom:10px}
+  .modal-profile-kicker{font-size:10px;margin-bottom:7px}
+  .modal-profile-role{font-size:12px;padding:10px}
+  .modal-profile-content{padding:25px 22px 32px}
+  .modal-profile-dialog .modal-info-block h3{font-size:22px}
+  .modal-profile-dialog .modal-info-block p,
+  .modal-profile-dialog .speaker-bio p,
+  .modal-profile-dialog .modal-bio-list li{font-size:14px}
+  .modal-profile-dialog .modal-close{top:10px;right:10px;width:38px;height:38px;font-size:22px}
+}
+@media(max-width:390px){
+  .modal-profile-header{grid-template-columns:97px minmax(0,1fr);gap:12px;padding:54px 13px 17px}
+  .modal-photo-frame{width:97px;height:132px}
+  .modal-profile-dialog .modal-profile-identity h2{font-size:19px}
+  .modal-profile-role{font-size:11px;padding:8px}
+  .modal-profile-content{padding:22px 17px 29px}
+  .modal-profile-dialog .modal-info-block h3{font-size:20px}
+}
