@@ -35,20 +35,21 @@ window.SEMINAR = {
   ],
   /* ATUR CARA DI BAWAH BERASASKAN DRAF JEMPUTAN 26 NOVEMBER 2026.
      PERLU SEMAK SEBELUM MENERBITKAN UNTUK ACARA 23 NOVEMBER. */
+  // Mengikut tentatif program bertarikh 21 November 2026.
+  // Tiada aktiviti dinyatakan dalam tentatif bagi 08:30–09:00.
   agenda: [
-    { time:'08:00', end:'08:30', type:'urusetia', kicker:'Ketibaan', title:'Pendaftaran Peserta & Sarapan', description:'Pendaftaran dan sarapan pagi.', speaker:'' },
-    { time:'08:30', end:'09:00', type:'rasmi', kicker:'Pembukaan', title:'Taklimat Seminar & Ucapan Perasmian', description:'Taklimat pentadbiran dan ucapan perasmian.', speaker:'YBhg. Datuk Dr. Awang Alik bin Jeman', role:'Ketua Setiausaha, Kementerian Dalam Negeri' },
-    { time:'09:00', end:'10:00', type:'sesi', kicker:'Sesi 01', title:'Konsep Penggunaan Data dalam Pembuatan Keputusan', description:'Mendalami asas penggunaan data sebagai sandaran kepada pertimbangan dan keputusan organisasi.', speaker:'Akan dimaklumkan', role:'Maklumat penceramah dalam penyelarasan' },
-    { time:'10:00', end:'10:15', type:'rehat', kicker:'Rehat', title:'Minum Pagi', description:'Rehat ringkas.', speaker:'' },
-    { time:'10:15', end:'11:15', type:'sesi', kicker:'Sesi 02', title:'Keselamatan Data dalam Perkhidmatan Awam di Era AI', description:'Meneroka isu perlindungan data, risiko pengendalian maklumat dan tanggungjawab organisasi.', speaker:'Akan dimaklumkan', role:'Maklumat penceramah dalam penyelarasan' },
-    { time:'11:20', end:'12:20', type:'sesi', kicker:'Sesi 03', title:'Landskap Ancaman Keselamatan dalam Era AI', description:'Meneliti perkembangan ancaman digital serta cabaran keselamatan dalam persekitaran AI.', speaker:'Akan dimaklumkan', role:'Maklumat penceramah dalam penyelarasan' },
-    { time:'12:30', end:'13:00', type:'rasmi', kicker:'Penutup', title:'Penutup Seminar', description:'Rumusan dan penutup.', speaker:'' },
-    { time:'13:00', end:'13:00', type:'urusetia', kicker:'Selesai', title:'Makan Tengah Hari & Bersurai', description:'Program tamat.', speaker:'' }
+    { time:'08:00', end:'08:30', type:'urusetia', kicker:'Ketibaan', title:'Pendaftaran Peserta dan Sarapan', description:'', speaker:'' },
+    { time:'09:00', end:'10:00', type:'sesi', kicker:'Wacana 1', title:'Konsep Penggunaan Data Dalam Pembuatan Keputusan', description:'', speaker:'Encik Mohamad Zafir Bin Nadzri', role:'Pembantu Penyelidik, Institut Penyelidikan Perakaunan (ARI), UiTM' },
+    { time:'10:00', end:'10:15', type:'rehat', kicker:'Rehat', title:'Minum Pagi', description:'', speaker:'' },
+    { time:'10:15', end:'11:15', type:'sesi', kicker:'Wacana 2', title:'AI dan Keselamatan Siber: Peluang dan Ancaman KDN serta Agensi', description:'', speaker:'YBrs. Ts. Dr. Azlina binti Ab. Aziz', role:'Ketua Penolong Pengarah, Agensi Keselamatan Siber Negara (NACSA)' },
+    { time:'11:20', end:'12:20', type:'sesi', kicker:'Wacana 3', title:'Apabila AI Menjadi Senjata: Jenayah Digital, Pemalsuan Identiti dan Cabaran Keselamatan Negara', description:'', speaker:'YBrs. Ts. Fakhrul Afiq Abd Aziz', role:'Senior Analyst, Unit AI, CyberSecurity Malaysia' },
+    { time:'12:30', end:'12:30', type:'rasmi', kicker:'Penutup', title:'Ucapan Penutup', description:'', speaker:'YBrs. Puan Siti Salmiah binti Haji Dimyati', role:'Setiausaha Bahagian, Bahagian Perancangan Strategik' },
+    { time:'13:00', end:'13:00', type:'urusetia', kicker:'Jamuan', title:'Makan Tengahari', description:'', speaker:'' }
   ],
   sessions: [
-    { code:'01', topic:'DATA / DECISION', title:'Konsep Penggunaan Data dalam Pembuatan Keputusan', description:'Bagaimana data yang relevan, berkualiti dan ditafsir dengan teliti dapat memperkukuh keputusan organisasi.', speaker:'Akan dimaklumkan', role:'Penceramah Sesi 1', photo:'', bio:'Profil penceramah akan dimuat naik selepas pengesahan urus setia.', tags:['Analitik Data','Pembuatan Keputusan','Sektor Awam'] },
-    { code:'02', topic:'DATA / PROTECTION', title:'Keselamatan Data dalam Perkhidmatan Awam di Era AI', description:'Tadbir urus maklumat dan keperluan keselamatan ketika AI semakin digunakan dalam perkhidmatan awam.', speaker:'Akan dimaklumkan', role:'Penceramah Sesi 2', photo:'', bio:'Profil penceramah akan dimuat naik selepas pengesahan urus setia.', tags:['Keselamatan Data','Tadbir Urus','AI Bertanggungjawab'] },
-    { code:'03', topic:'AI / THREAT LANDSCAPE', title:'Landskap Ancaman Keselamatan dalam Era AI', description:'Risiko baharu, kaedah serangan yang berkembang dan keperluan kesedaran ancaman dalam era AI.', speaker:'Akan dimaklumkan', role:'Penceramah Sesi 3', photo:'', bio:'Profil penceramah akan dimuat naik selepas pengesahan urus setia.', tags:['Ancaman Siber','Risiko AI','Kesiapsiagaan'] }
+    { code:'01', topic:'DATA / KEPUTUSAN', title:'Konsep Penggunaan Data Dalam Pembuatan Keputusan', description:'Perkongsian mengenai konsep penggunaan data dalam pembuatan keputusan.', speaker:'Encik Mohamad Zafir Bin Nadzri', role:'Pembantu Penyelidik, Institut Penyelidikan Perakaunan (ARI), UiTM', photo:'', bio:'', tags:['Penggunaan Data','Pembuatan Keputusan'] },
+    { code:'02', topic:'AI / KESELAMATAN SIBER', title:'AI dan Keselamatan Siber: Peluang dan Ancaman KDN serta Agensi', description:'Perkongsian mengenai peluang dan ancaman AI dalam konteks keselamatan siber KDN serta agensi.', speaker:'YBrs. Ts. Dr. Azlina binti Ab. Aziz', role:'Ketua Penolong Pengarah, Agensi Keselamatan Siber Negara (NACSA)', photo:'', bio:'', tags:['Keselamatan Siber','Peluang AI','Ancaman AI'] },
+    { code:'03', topic:'JENAYAH DIGITAL / IDENTITI', title:'Apabila AI Menjadi Senjata: Jenayah Digital, Pemalsuan Identiti dan Cabaran Keselamatan Negara', description:'Perkongsian mengenai jenayah digital, pemalsuan identiti dan cabaran keselamatan negara berkaitan AI.', speaker:'YBrs. Ts. Fakhrul Afiq Abd Aziz', role:'Senior Analyst, Unit AI, CyberSecurity Malaysia', photo:'', bio:'', tags:['Jenayah Digital','Pemalsuan Identiti','Keselamatan Negara'] }
   ],
   resources: [
     /* Contoh selepas bahan tersedia:
