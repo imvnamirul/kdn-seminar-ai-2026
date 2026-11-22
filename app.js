@@ -84,11 +84,21 @@
   function openModal(index, trigger) {
     const s = sessions[index]; if(!s) return;
     modalTrigger = trigger;
-    setText('#modalKicker',`WACANA / ${s.code}`);setText('#modalCode',s.code);setText('#modalTopic',s.topic);
-    setText('#modalTitle',s.title);setText('#modalDescription',s.description);
-    setText('#modalSpeaker',s.speaker);setText('#modalRole',s.role);setText('#modalBio',s.bio);
-    $('#modalTags').innerHTML = (s.tags || []).map(t=>`<span>${esc(t)}</span>`).join('');
-    $('#modalAvatar').innerHTML = s.photo && isUrl(s.photo) ? `<img src="${esc(s.photo)}" alt="Foto ${esc(s.speaker)}">` : '✳';
+    setText('#modalKicker', `WACANA ${s.code || String(index+1).padStart(2,'0')}`);
+    setText('#modalSpeaker', s.speaker || 'Penceramah');
+    setText('#modalRole', s.role || 'Maklumat jawatan belum dimaklumkan');
+    setText('#modalTitle', s.title || 'Tajuk akan dimaklumkan');
+    setText('#modalDescription', s.description || 'Maklumat fokus wacana akan dikemas kini oleh urus setia.');
+    const bio = String(s.bio || '').trim();
+    const lines = bio.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+    $('#modalBio').innerHTML = !bio
+      ? '<p>Maklumat profil penceramah akan dikemas kini oleh urus setia.</p>'
+      : lines.length > 1 || lines.some(line => line.startsWith('•'))
+        ? '<ul class="modal-bio-list">' + lines.map(line => '<li>' + esc(line.replace(/^•\s*/, '')) + '</li>').join('') + '</ul>'
+        : '<p>' + esc(bio) + '</p>';
+    $('#modalAvatar').innerHTML = s.photo && isUrl(s.photo)
+      ? `<img src="${esc(s.photo)}" alt="Foto ${esc(s.speaker)}" loading="eager" decoding="async">`
+      : '<div class="modal-portrait-placeholder"><span>' + esc(s.code || String(index+1).padStart(2,'0')) + '</span><small>FOTO PENCERAMAH BELUM TERSEDIA</small></div>';
     modal.hidden=false;document.body.classList.add('lock-scroll');$('#modalClose').focus();
   }
   function closeModal() {
