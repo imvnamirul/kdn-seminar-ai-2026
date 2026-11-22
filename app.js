@@ -21,7 +21,9 @@
   setText('#heroTime', `${h12(d.startTime)} ${meridiem(d.startTime)} — ${h12(d.endTime)} ${meridiem(d.endTime)}`);
   setText('#heroVenue', d.venue || 'LOKASI AKAN DIMAKLUMKAN');
   setText('#heroRoom', d.room || 'ZENITH HOTEL, PUTRAJAYA');
-  setText('#heroMessage', d.headline || 'KEMENTERIAN DALAM NEGERI TAHUN 2026');
+  // Keep the separately styled ministry script and year intact.
+  setText('#heroMinistry', d.ministry || 'Kementerian Dalam Negeri');
+  setText('#heroYear', `TAHUN ${d.year || '2026'}`);
   setText('#heroDescription', d.description || '');
   setText('#introText', d.intro || '');
   setText('#agendaDateLabel', `${weekday}, ${dateLong}`);
