@@ -11,7 +11,7 @@
   <meta property="og:image" content="kad-perkongsian.png">
   <title>Seminar Kecerdasan Buatan (AI) KDN 2026</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=speaker-sage-v17-20261122">
+  <link rel="stylesheet" href="styles.css?v=speaker-modal-v18-20261122">
   <script defer src="data.js?v=penceramah-photo-v17"></script>
   <script defer src="app.js?v=penceramah-photo-v17"></script>
   <script defer src="neural.js"></script>
@@ -137,9 +137,32 @@
   </main>
 
   <div class="modal-backdrop" id="sessionModal" hidden>
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" tabindex="-1">
-      <div class="modal-top"><span id="modalKicker">SESI / 01</span><button type="button" class="round-close modal-close" id="modalClose" aria-label="Tutup maklumat sesi">×</button></div>
-      <div class="modal-scroll"><span class="modal-code" id="modalCode">01</span><p class="modal-topic" id="modalTopic">DATA / DECISION</p><h2 id="modalTitle">Maklumat Sesi</h2><p id="modalDescription">Penerangan sesi.</p><div class="modal-divider"></div><span class="modal-label">PENCERAMAH</span><div class="modal-speaker"><div class="speaker-avatar" id="modalAvatar">✳</div><div><h3 id="modalSpeaker">Akan dimaklumkan</h3><p id="modalRole">Penceramah</p></div></div><p class="speaker-bio" id="modalBio"></p><div id="modalTags" class="modal-tags"></div></div>
+    <div class="modal-dialog modal-profile-dialog" role="dialog" aria-modal="true" aria-labelledby="modalSpeaker" aria-describedby="modalDescription" tabindex="-1">
+      <button type="button" class="round-close modal-close" id="modalClose" aria-label="Tutup profil penceramah">×</button>
+      <div class="modal-scroll">
+        <div class="modal-profile-header">
+          <div class="modal-photo-frame" id="modalAvatar" aria-label="Foto penceramah">✳</div>
+          <div class="modal-profile-identity">
+            <span class="modal-profile-kicker" id="modalKicker">WACANA 01</span>
+            <h2 id="modalSpeaker">Nama Penceramah</h2>
+            <p id="modalRole" class="modal-profile-role">Jawatan dan institusi</p>
+          </div>
+        </div>
+        <div class="modal-profile-content">
+          <section class="modal-info-block">
+            <span class="modal-label">TAJUK WACANA</span>
+            <h3 id="modalTitle">Tajuk Wacana</h3>
+          </section>
+          <section class="modal-info-block">
+            <span class="modal-label">FOKUS WACANA</span>
+            <p id="modalDescription">Penerangan wacana.</p>
+          </section>
+          <section class="modal-info-block">
+            <span class="modal-label">PROFIL PENCERAMAH</span>
+            <div id="modalBio" class="speaker-bio">Maklumat profil akan dimaklumkan.</div>
+          </section>
+        </div>
+      </div>
     </div>
   </div>
   <button id="backToTop" class="back-top" type="button" aria-label="Kembali ke atas">↑</button>
