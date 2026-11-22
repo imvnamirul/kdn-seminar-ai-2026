@@ -142,21 +142,32 @@ agenda: [
         'Semak sumber serta ketepatan dapatan dan asingkan maklumat terperingkat sebelum menggunakan mana-mana alat AI.'
       ]
     },
-    {
-      code:'02', fileName:'Wacana_02_AI_dan_Keselamatan_Siber.pdf', pageCount:64,
-      partPrefix:'bahan/wacana-02.part', partCount:10,
-      intro:'Meneroka potensi AI dalam meningkatkan kecekapan agensi KDN sambil memahami ancaman, risiko serta keperluan keselamatan siber dan tadbir urus AI yang bertanggungjawab.',
-      content:[
-        'Potensi AI membantu pemprosesan maklumat, automasi dan pengesanan ancaman dalam persekitaran organisasi.',
-        'Ancaman terhadap sistem dan data: kebocoran maklumat, penyalahgunaan model serta kelemahan kawalan akses.',
-        'Prinsip tadbir urus dan jaminan keselamatan AI, termasuk kepentingan kerangka keselamatan AI (AISCF).'
-      ],
-      outcomes:[
-        'Tapis cadangan penggunaan AI berdasarkan sensitiviti data, kesesuaian tujuan dan keperluan kelulusan.',
-        'Tetapkan kawalan manusia, hak akses dan semakan output sebelum AI digunakan untuk menyokong keputusan rasmi.',
-        'Laporkan tingkah laku sistem atau permintaan maklumat yang mencurigakan melalui saluran keselamatan organisasi.'
-      ]
-    },
+ 
+{
+  code:'02',
+  fileName:'Wacana_02_AI_dan_Keselamatan_Siber_Terkini.pdf',
+  pageCount:64,
+  pdf:'bahan/wacana-02-terkini.pdf',
+
+  intro:'Meneliti peluang AI untuk meningkatkan operasi KDN, ancaman yang muncul apabila AI digunakan atau disalah guna, dan inisiatif kerajaan bagi penggunaan AI yang selamat.',
+
+  content:[
+    'Aplikasi AI dalam konteks KDN: analitik keselamatan, kecekapan operasi, pengesahan identiti, pemantauan sempadan dan penyampaian perkhidmatan.',
+
+    'Tiga kelompok risiko siber: tradisional, khusus sistem AI (termasuk data poisoning dan prompt injection), serta baharu seperti deepfake, identiti sintetik dan ejen autonomi.',
+
+    'Inisiatif kerajaan serta dokumen rujukan termasuk AI Malaysia Berhad, Pelan Tindakan AI Kebangsaan 2026–2030 dan Kerangka Keselamatan Siber bagi Sistem Kecerdasan Buatan (AISCF).'
+  ],
+
+  outcomes:[
+    'Pilih penggunaan AI yang sesuai dengan fungsi agensi dan pastikan keputusan penting tetap disemak oleh pegawai.',
+
+    'Lindungi maklumat sensitif KDN: elakkan perkongsian melalui AI awam dan semak ketepatan serta sumber output sebelum digunakan.',
+
+    'Sahkan arahan suara atau kandungan yang mencurigakan melalui saluran rasmi; amalkan disiplin, semakan dan tanggungjawab.'
+  ]
+},
+
     {
       code:'03', fileName:'Wacana_03_Apabila_AI_Menjadi_Senjata.pdf', pageCount:48,
       partPrefix:'bahan/wacana-03.part', partCount:9,
