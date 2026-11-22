@@ -37,15 +37,85 @@ window.SEMINAR = {
      PERLU SEMAK SEBELUM MENERBITKAN UNTUK ACARA 23 NOVEMBER. */
   // Mengikut tentatif program bertarikh 21 November 2026.
   // Tiada aktiviti dinyatakan dalam tentatif bagi 08:30–09:00.
-  agenda: [
-    { time:'08:00', end:'08:30', type:'urusetia', kicker:'Ketibaan', title:'Pendaftaran Peserta dan Sarapan', description:'', speaker:'' },
-    { time:'09:00', end:'10:00', type:'sesi', kicker:'Wacana 1', title:'Konsep Penggunaan Data Dalam Pembuatan Keputusan', description:'', speaker:'Encik Mohamad Zafir Bin Nadzri', role:'Pembantu Penyelidik, Institut Penyelidikan Perakaunan (ARI), Universiti Teknologi MARA (UiTM)' },
-    { time:'10:00', end:'10:15', type:'rehat', kicker:'Rehat', title:'Minum Pagi', description:'', speaker:'' },
-    { time:'10:15', end:'11:15', type:'sesi', kicker:'Wacana 2', title:'AI dan Keselamatan Siber: Antara Potensi dan Risiko', description:'', speaker:'YBrs. Ts. Dr. Azlina binti Ab. Aziz', role:'Ketua Penolong Pengarah, Agensi Keselamatan Siber Negara (NACSA)' },
-    { time:'11:20', end:'12:20', type:'sesi', kicker:'Wacana 3', title:'Apabila AI Menjadi Senjata: Jenayah Digital, Pemalsuan Identiti dan Cabaran Keselamatan Negara', description:'', speaker:'YBrs. Ts. Fakhrul Afiq Abd Aziz', role:'Senior Analyst, Unit Kecerdasan Buatan (AI), CyberSecurity Malaysia' },
-    { time:'12:30', end:'12:30', type:'rasmi', kicker:'Penutup', title:'Ucapan Penutup', description:'', speaker:'YBrs. Puan Siti Salmiah binti Haji Dimyati', role:'Setiausaha Bahagian, Bahagian Perancangan Strategik' },
-    { time:'13:00', end:'13:00', type:'urusetia', kicker:'Jamuan', title:'Makan Tengahari', description:'', speaker:'' }
-  ],
+
+agenda: [
+  {
+    time:'08:00',
+    end:'08:30',
+    type:'urusetia',
+    kicker:'Ketibaan',
+    title:'Pendaftaran Peserta dan Sarapan',
+    description:'',
+    speaker:''
+  },
+  {
+    time:'09:00',
+    end:'09:00',
+    type:'rasmi',
+    kicker:'Fotografi',
+    title:'Sesi Fotografi',
+    description:'',
+    speaker:''
+  },
+  {
+    time:'09:05',
+    end:'09:05',
+    type:'rasmi',
+    kicker:'Perasmian',
+    title:'Ucapan Perasmian',
+    description:'',
+    speaker:''
+  },
+  {
+    time:'09:15',
+    end:'10:15',
+    type:'sesi',
+    kicker:'Wacana 1',
+    title:'Konsep Penggunaan Data Dalam Pembuatan Keputusan',
+    description:'',
+    speaker:'Encik Mohamad Zafir Bin Nadzri',
+    role:'Pembantu Penyelidik, Institut Penyelidikan Perakaunan (ARI), Universiti Teknologi MARA (UiTM)'
+  },
+  {
+    time:'10:15',
+    end:'10:30',
+    type:'rehat',
+    kicker:'Rehat',
+    title:'Minum Pagi',
+    description:'',
+    speaker:''
+  },
+  {
+    time:'10:30',
+    end:'11:30',
+    type:'sesi',
+    kicker:'Wacana 2',
+    title:'AI dan Keselamatan Siber: Antara Potensi dan Risiko',
+    description:'',
+    speaker:'YBrs. Ts. Dr. Azlina binti Ab. Aziz',
+    role:'Ketua Penolong Pengarah, Agensi Keselamatan Siber Negara (NACSA)'
+  },
+  {
+    time:'11:35',
+    end:'12:35',
+    type:'sesi',
+    kicker:'Wacana 3',
+    title:'Apabila AI Menjadi Senjata: Jenayah Digital, Pemalsuan Identiti dan Cabaran Keselamatan Negara',
+    description:'',
+    speaker:'YBrs. Ts. Fakhrul Afiq Abd Aziz',
+    role:'Senior Analyst, Unit Kecerdasan Buatan (AI), CyberSecurity Malaysia'
+  },
+  {
+    time:'13:00',
+    end:'13:00',
+    type:'urusetia',
+    kicker:'Jamuan',
+    title:'Makan Tengahari',
+    description:'',
+    speaker:''
+  }
+],
+
   sessions: [
     { code:'01', topic:'DATA / KEPUTUSAN', title:'Konsep Penggunaan Data Dalam Pembuatan Keputusan', description:'Perkongsian mengenai konsep penggunaan data dalam pembuatan keputusan.', speaker:'Encik Mohamad Zafir Bin Nadzri', role:'Pembantu Penyelidik, Institut Penyelidikan Perakaunan (ARI), Universiti Teknologi MARA (UiTM)', photo:'assets/wacana1_zafir.webp', bio:'• 5 tahun pengalaman dalam pembangunan sistem dan AI.\n• Kepakaran: fine-tuning LLM, deep learning, agentic AI dan sistem multi-agent.\n• Hasil kerja: chatbot, RAG dan platform pengurusan kerja (Work OS).\n• Terlibat dalam pembangunan sistem IKKA, KDN.', tags:['Penggunaan Data','Pembuatan Keputusan','Pembangunan AI'] },
     { code:'02', topic:'AI / KESELAMATAN SIBER', title:'AI dan Keselamatan Siber: Antara Potensi dan Risiko', description:'Meneroka peluang penggunaan AI dalam keselamatan siber serta risiko seperti kebocoran data, ancaman kepada sistem AI dan penyalahgunaan teknologi terhadap agensi KDN.', speaker:'YBrs. Ts. Dr. Azlina binti Ab. Aziz', role:'Ketua Penolong Pengarah, Agensi Keselamatan Siber Negara (NACSA), Majlis Keselamatan Negara (MKN), Jabatan Perdana Menteri (JPM)', photo:'assets/wacana2_azlina.webp', bio:'• Lebih 20 tahun pengalaman dalam perkhidmatan awam, termasuk JPJ, MOSTI dan MAFI, dengan kepakaran dalam tadbir urus ICT, transformasi digital dan inovasi sektor awam.\n• Memiliki Ph.D. dalam Sains Maklumat (UKM), Sarjana Teknologi Maklumat (UiTM) serta Ijazah Sarjana Muda dan Diploma Sains Komputer (UPM).\n• Menerajui pembangunan AISCF, Dasar Kriptografi Negara (MyKriptografi) dan Pelan Tindakan MyKriptografi 2026–2030; turut menyumbang kepada MCSS 2025–2030.\n• Felo UNIDIR Women in AI serta ahli Kumpulan Kerja Keselamatan AI (AI Malaysia Berhad) dan Jawatankuasa Keselamatan Siber NBAIC.', tags:['Keselamatan Siber','AI','Kriptografi'] },
