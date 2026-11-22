@@ -100,9 +100,18 @@ window.SEMINAR = {
     }
   ],
   contacts: [
-    { name:'Cik Siti Hanizah Binti Tupani', role:'Urus Setia Seminar', email:'sitihanizah@moha.gov.my' },
-    { name:'Encik Amirul Iman Bin Md Nizam', role:'Urus Setia Seminar', email:'amiruliman@moha.gov.my' }
+    { name:'Cik Siti Hanizah Binti Tupani', role:'Urus Setia Seminar', phone:'019-6353 700', email:'sitihanizah@moha.gov.my' },
+    { name:'Cik Haziqah Nazurah Binti Priyant', role:'Urus Setia Seminar', phone:'016-388 9206', email:'haziqahnazurah@moha.gov.my' },
+    { name:'Encik Amirul Iman Bin Md Nizam', role:'Urus Setia Seminar', phone:'011-39132036', email:'amiruliman@moha.gov.my' }
   ],
+  office: {
+    name:'Bahagian Perancangan Strategik (PG)',
+    ministry:'Kementerian Dalam Negeri',
+    addressLines:['Aras 7 & 8, Setia Perkasa 2','Kompleks Setia Perkasa','Pusat Pentadbiran Kerajaan Persekutuan','62546 Putrajaya'],
+    phone:'03 8886 3299',
+    fax:'03 8889 1713',
+    email:'bahagian_pg@moha.gov.my'
+  },
   officePhone: '03-8886 3299'
 
 };
