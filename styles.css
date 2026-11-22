@@ -1936,21 +1936,14 @@ img{max-width:100%;display:block}
   #hubungi .contact-office-card{padding:27px 16px}
 }
 
-
-/* V24 — ALTERNATING SECTION BACKGROUNDS */
-/*
-   Visual rhythm, top to bottom:
-   Hero          DARK
-   Pengenalan    LIGHT
-   Atur Cara     DARK
-   Penceramah    LIGHT
-   Slogan strip  DARK
-   Ringkasan     LIGHT
-   Lokasi        DARK
-   Waktu Solat   LIGHT
-   Hubungi Kami  DARK
-   Preserve existing panels, portrait cards, images and responsive layouts.
-*/
+/* V25 — STRICT ALTERNATING BACKGROUNDS FOR MAIN CONTENT SECTIONS
+   Hero: dark
+   01 Pengenalan: light       02 Atur Cara: dark
+   03 Penceramah: light      04 Ringkasan Wacana: dark
+   05 Lokasi: light          06 Waktu Solat: dark
+   07 Hubungi Kami: light
+   The small manifesto strip is decorative, not a main section.
+   Existing card components and content remain untouched. */
 #utama.hero{
   background-color:#171e19;
 }
@@ -1959,8 +1952,7 @@ img{max-width:100%;display:block}
   color:#1b271e;
 }
 #aturcara.agenda-section{
-  background:
-    radial-gradient(ellipse at 94% 9%,rgba(153,197,111,.075),transparent 40%),
+  background:radial-gradient(ellipse at 94% 9%,rgba(153,197,111,.075),transparent 40%),
     linear-gradient(148deg,#1b241e 0%,#233027 62%,#1b241e 100%);
   color:#f8faf5;
 }
@@ -1968,29 +1960,107 @@ img{max-width:100%;display:block}
   background:#f2f5ee;
   color:#202b21;
 }
-/* Treat the editorial slogan strip as a true dark transition. */
+/* Short bright divider separates Penceramah from the dark Ringkasan section. */
 .manifesto-band{
-  background:#1a291f;
-  color:#eef8df;
-  border-top:1px solid #3d5440;
-  border-bottom:1px solid #3d5440;
+  background:#d9ff83;
+  color:#1b2b1e;
+  border-top:1px solid #c6e877;
+  border-bottom:1px solid #c6e877;
 }
-.manifesto-inner .manifesto-star{color:#d9ff83}
+.manifesto-inner .manifesto-star{color:#304d2d}
+
+/* 04 — RINGKASAN WACANA / DARK */
 #bahan.wacana-library-section{
-  background:#fafaf6;
-  color:#202b21;
+  background:radial-gradient(ellipse at 96% 6%,rgba(165,203,116,.09),transparent 38%),
+    linear-gradient(153deg,#1c2921 0%,#243529 58%,#1b2921 100%);
+  color:#f3f8ee;
 }
+#bahan .section-eyebrow{color:#d2dfc9}
+#bahan .section-eyebrow .eyebrow-line{background:#5c705b}
+#bahan .section-title{color:#f3f8ee}
+#bahan .wacana-library-heading .section-title i{color:#d9ff83}
+#bahan .wacana-library-heading .heading-note{color:#c6d5c0}
+#bahan .wacana-brief{
+  border-color:#577551;
+  box-shadow:0 20px 42px rgba(5,12,7,.23);
+}
+#bahan .wacana-loading{color:#c4d7ba}
+
+/* 05 — LOKASI / LIGHT; cards stay dark, creating clear contrast. */
 #lokasi.location-section{
-  background:
-    radial-gradient(ellipse at 90% 8%,rgba(139,185,91,.10),transparent 36%),
-    linear-gradient(145deg,#1b2920 0%,#24352a 54%,#1b2920 100%);
-  color:#f8faf5;
+  background:#f3f6ef;
+  color:#1c2b21;
 }
+#lokasi .section-eyebrow.light{color:#51634f}
+#lokasi .section-eyebrow.light .eyebrow-line{background:#c8d2c2}
+#lokasi .section-title.light-text{color:#263b2a}
+#lokasi .section-title.light-text i{color:#678e45}
+#lokasi .seminar-location-intro{color:#5a6c58}
+#lokasi .seminar-location-address{
+  border-left-color:#8cb75f;
+  background:linear-gradient(100deg,#e4ecdf,rgba(228,236,223,.12));
+}
+#lokasi .seminar-location-address>span{color:#56783d}
+#lokasi .seminar-location-address strong{color:#203528}
+#lokasi .seminar-location-address p{color:#60725c}
+#lokasi .seminar-location-map{color:#416632;border-bottom-color:#7d9a6b}
+#lokasi .seminar-location-map:hover{color:#1b3324}
+
+/* 06 — WAKTU SOLAT / DARK; pale prayer tiles remain readable. */
 #solat.prayer-section{
-  background:
-    radial-gradient(ellipse at 92% 8%,rgba(183,210,155,.21),transparent 38%),
-    #f5f7ef;
-  color:#1b271e;
+  background:radial-gradient(ellipse at 93% 5%,rgba(155,195,98,.14),transparent 37%),
+    linear-gradient(145deg,#1a2920,#263a2c 60%,#1c2b23);
+  color:#f6faf0;
 }
-/* The contact section already has a curated deep-green gradient (V23).
-   Keep that gradient and the contact card contrast unchanged. */
+#solat .section-eyebrow{color:#d4e5c9}
+#solat .section-eyebrow .eyebrow-line{background:#526b50}
+#solat .section-title{color:#f6faf0}
+#solat .section-title i{color:#d9ff83}
+#solat .prayer-heading-copy p{color:#c2d1bd}
+#solat .prayer-date-card{background:#304b37;border-top-color:#d9ff83}
+#solat .prayer-grid{border-color:#6c896c;background:#6c896c}
+#solat .prayer-card:not(.prayer-card-featured){background:#f8faf4}
+#solat .prayer-card:not(.prayer-card-featured):hover{background:#eff5e5}
+#solat .prayer-card-featured{background:#d9ff83}
+#solat .prayer-card-featured:hover{background:#e9ffbc}
+#solat .prayer-card-featured h3,
+#solat .prayer-card-featured time{color:#223b26}
+#solat .prayer-card-featured .prayer-card-no,
+#solat .prayer-card-featured .prayer-card-period{color:#4a6b3b}
+#solat .prayer-footnote{color:#c4d8bd}
+#solat .prayer-footnote-icon{color:#d9ff83}
+#solat .prayer-timezone{color:#afcba7}
+
+/* 07 — HUBUNGI KAMI / LIGHT; officer and office cards remain dark. */
+#hubungi.contact-section{
+  background:linear-gradient(155deg,#f9faf6 0%,#eef4e9 52%,#f9faf6 100%);
+  color:#1c3024;
+}
+#hubungi .contact-overline{color:#567b3b}
+#hubungi .contact-head h2{color:#233628}
+#hubungi .contact-head h2 i{color:#719b47}
+#hubungi .contact-head-copy p{color:#5c705d}
+#hubungi .contact-head-aside>span{color:#5e755e}
+#hubungi .contact-head-aside strong{color:#223829}
+#hubungi .contact-head-aside strong span{color:#719b47}
+#hubungi .contact-head-aside small{color:#6d816c}
+#hubungi .contact-section-heading{
+  color:#446745;
+  border-top-color:#bfceba;
+}
+#hubungi .contact-section-heading>span:last-child{color:#71876c}
+#hubungi .footer-bottom{
+  border-top-color:#c2d3bf;
+  color:#526b53;
+}
+#hubungi .footer-brand strong{color:#233a29}
+#hubungi .footer-brand span{color:#6b806d}
+#hubungi .footer-bottom a{color:#466b40}
+#hubungi .footer-bottom a:hover{color:#223c29}
+
+@media print{
+  #solat.prayer-section{background:#fff!important;color:#111!important}
+  #solat .section-title{color:#111}
+  #solat .prayer-footnote{color:#333}
+  #solat .prayer-card-featured{background:#e4eccf}
+}
