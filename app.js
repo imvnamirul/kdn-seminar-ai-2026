@@ -207,8 +207,28 @@
   }));
   window.addEventListener('pagehide',()=>pdfCache.forEach(url=>URL.revokeObjectURL(url)));
 
-  // FAQ and administrative contacts.
-  $('#faqList').innerHTML=(Array.isArray(d.faq)?d.faq:[]).map(item=>`<details class="faq-item"><summary>${esc(item.q)}</summary><p>${esc(item.a)}</p></details>`).join('');
+  // Contact information. FAQ section was intentionally removed.
+  // Venue photo lightbox uses the native modal dialog, above the sticky header.
+  const venueDialog = $('#venuePhotoDialog'), venueImg = $('#venuePhotoImage');
+  let lastVenueTrigger = null;
+  $('.seminar-venue-image').forEach(btn => btn.addEventListener('click', () => {
+    const src = btn.dataset.venuePhoto;
+    if (!isUrl(src) || !venueDialog || !venueImg) return;
+    lastVenueTrigger = btn;
+    venueImg.src = src;
+    venueImg.alt = btn.dataset.venueTitle || 'Gambar lokasi seminar';
+    setText('#venuePhotoTitle', btn.dataset.venueTitle || 'Gambar lokasi seminar');
+    if (typeof venueDialog.showModal === 'function') venueDialog.showModal();
+    else window.open(src, '_blank', 'noopener');
+  }));
+  $('#venuePhotoClose')?.addEventListener('click', () => venueDialog.close());
+  venueDialog?.addEventListener('click', e => {
+    if (e.target === venueDialog) venueDialog.close();
+  });
+  venueDialog?.addEventListener('close', () => {
+    venueImg.removeAttribute('src');
+    if (lastVenueTrigger) lastVenueTrigger.focus({preventScroll:true});
+  });
   $('#contactsGrid').innerHTML=(Array.isArray(d.contacts)?d.contacts:[]).map(c=>`<div class="contact-person"><span>${esc(c.role)}</span><h3>${esc(c.name)}</h3><a href="mailto:${esc(c.email)}">${esc(c.email)} ↗</a></div>`).join('');
   if(d.officePhone){setText('#officePhone',d.officePhone);$('#officePhone').href='tel:'+d.officePhone.replace(/[^0-9+]/g,'');}
 
@@ -224,7 +244,7 @@
   overlay.addEventListener('click',()=>toggleMenu(false));
   $$('.mobile-nav a').forEach(a=>a.addEventListener('click',()=>toggleMenu(false)));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!modal.hidden)closeModal();else if(menuWasOpened)toggleMenu(false);}});
-  const desktopMedia = window.matchMedia('(min-width:1081px)');
+  const desktopMedia = window.matchMedia('(min-width:1201px)');
   desktopMedia.addEventListener?.('change',e=>{if(e.matches && menuWasOpened)toggleMenu(false);});
 
   // Progress line and back-to-top.
