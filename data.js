@@ -26,12 +26,12 @@ window.SEMINAR = {
     url: 'https://forms.gle/5Zyx3rwgk45i2skN6',
     label: 'Pengesahan Kehadiran'
   },
-  intro: 'Seminar ini mengetengahkan pemahaman tentang teknologi AI dalam konteks keselamatan negara, termasuk bagaimana data membantu keputusan strategik, melindungi maklumat serta memahami ancaman baharu dalam era AI.',
+  intro: 'Seminar ini memberi pendedahan kepada warga KDN mengenai perkembangan teknologi AI dan implikasinya terhadap persekitaran keselamatan semasa. Penekanan turut diberikan kepada landskap ancaman, cabaran keselamatan yang muncul serta potensi dan risiko pengadaptasian AI dalam mendepani ancaman yang semakin kompleks.',
   objectives: [
-    { number:'01', label:'Pemahaman AI', title:'Memperkukuh literasi AI', description:'Meningkatkan kefahaman tentang perkembangan AI dan aplikasinya dalam persekitaran kerja sektor awam.' },
-    { number:'02', label:'Keputusan Berasaskan Data', title:'Memantapkan analisis strategik', description:'Menghayati nilai data sebagai asas untuk menyokong pertimbangan dan pembuatan keputusan yang lebih bermaklumat.' },
-    { number:'03', label:'Keselamatan Data', title:'Memperkasa kesedaran perlindungan maklumat', description:'Mengukuhkan kepekaan terhadap keselamatan data serta penggunaan AI secara bertanggungjawab.' },
-    { number:'04', label:'Ancaman Keselamatan', title:'Memahami risiko dalam era AI', description:'Meneliti landskap ancaman yang berubah dan implikasi teknologi AI terhadap cabaran keselamatan semasa.' }
+    { number:'01', label:'Perkembangan AI', title:'Memahami perkembangan teknologi AI', description:'Meningkatkan kefahaman warga KDN mengenai perkembangan AI, khususnya dalam konteks keselamatan.' },
+    { number:'02', label:'Implikasi Keselamatan', title:'Meneliti implikasi AI terhadap keselamatan', description:'Memberi pendedahan tentang implikasi teknologi AI terhadap persekitaran keselamatan semasa.' },
+    { number:'03', label:'Ancaman & Cabaran', title:'Mengenal pasti ancaman dan cabaran baharu', description:'Memahami perubahan landskap ancaman keselamatan serta cabaran yang muncul seiring perkembangan AI.' },
+    { number:'04', label:'Potensi & Risiko AI', title:'Menilai potensi dan risiko pengadaptasian AI', description:'Meneliti penggunaan AI dalam mendepani ancaman keselamatan yang semakin kompleks, termasuk potensi dan risikonya.' }
   ],
   /* ATUR CARA DI BAWAH BERASASKAN DRAF JEMPUTAN 26 NOVEMBER 2026.
      PERLU SEMAK SEBELUM MENERBITKAN UNTUK ACARA 23 NOVEMBER. */
