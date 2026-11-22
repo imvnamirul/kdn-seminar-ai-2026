@@ -60,19 +60,23 @@
     renderAgenda(btn.dataset.agendaFilter);
   }));
 
-  // Original vector illustrations for the three session cards.
-  const shapes = [
-    '<svg viewBox="0 0 180 180" aria-hidden="true"><path d="M19 131 54 98l35 20 39-66 34 38"/><path d="M19 147 54 114l35 20 39-66 34 38" opacity=".3"/><circle cx="19" cy="131" r="6"/><circle cx="54" cy="98" r="6"/><circle cx="89" cy="118" r="6"/><circle cx="128" cy="52" r="6"/><circle cx="162" cy="90" r="6"/><path d="M20 33v119h143" opacity=".3"/></svg>',
-    '<svg viewBox="0 0 180 180" aria-hidden="true"><path d="M90 21c26 15 49 18 56 22v48c0 35-16 54-56 70-40-16-56-35-56-70V43c9-4 33-8 56-22Z"/><path d="M90 39c20 10 37 12 39 16v36c0 23-10 37-39 51-29-14-39-28-39-51V55c7-4 22-6 39-16Z" opacity=".4"/><rect x="77" y="85" width="27" height="24" rx="3"/><path d="M83 85v-8a7 7 0 0 1 15 0v8"/></svg>',
-    '<svg viewBox="0 0 180 180" aria-hidden="true"><circle cx="90" cy="90" r="62"/><circle cx="90" cy="90" r="41" stroke-dasharray="4 7"/><circle cx="90" cy="90" r="19"/><path d="M90 5v30M90 145v30M5 90h30M145 90h30M29 29l22 22m78 78 22 22M151 29l-22 22m-78 78-22 22"/><path d="m84 85 6-12 6 12-6 16Z" fill="#748a55"/></svg>'
-  ];
+  // Speaker-first cards: portraits and credentials lead; talk topic follows.
   const sessions = Array.isArray(d.sessions) ? d.sessions : [];
-  $('#sessionsGrid').innerHTML = sessions.map((s,i) => `<article class="session-card">
-    <div class="session-card-top"><span>WACANA / ${esc(s.code || String(i+1).padStart(2,'0'))}</span><span>↗</span></div>
-    <span class="session-code" aria-hidden="true">${esc(s.code)}</span>
-    <div class="session-glyph ${s.photo && isUrl(s.photo) ? 'has-portrait' : ''}">${s.photo && isUrl(s.photo) ? `<img class="speaker-portrait" src="${esc(s.photo)}" loading="lazy" alt="Potret ${esc(s.speaker)}">` : shapes[i % shapes.length]}</div>
-    <div class="session-card-body"><span class="session-card-topic">${esc(s.topic)}</span><h3>${esc(s.title)}</h3><p class="session-card-desc">${esc(s.description)}</p><div class="session-footer"><span>${esc(s.speaker)}</span><button class="details-button" type="button" data-open-session="${i}" aria-label="Lihat butiran sesi ${i+1}">↗</button></div></div>
-  </article>`).join('');
+  $('#sessionsGrid').innerHTML = sessions.map((s,i) => {
+    const index = esc(s.code || String(i+1).padStart(2,'0'));
+    const image = s.photo && isUrl(s.photo)
+      ? '<img class="speaker-card-portrait" src="'+esc(s.photo)+'" alt="Potret '+esc(s.speaker)+'" loading="lazy" decoding="async">'
+      : '<div class="speaker-card-awaiting" aria-label="Foto penceramah belum tersedia"><span>'+index+'</span><small>FOTO PENCERAMAH<br>AKAN DIKEMAS KINI</small></div>';
+    return '<article class="session-card speaker-profile-card">'
+      +'<div class="speaker-profile-visual"><span class="speaker-wacana-tag">WACANA '+index+'</span>'+image+'</div>'
+      +'<div class="speaker-profile-rule"></div>'
+      +'<div class="speaker-profile-copy">'
+      +'<h3 class="speaker-profile-name">'+esc(s.speaker)+'</h3>'
+      +'<div class="speaker-profile-role">'+esc(s.role||'Maklumat jawatan akan dimaklumkan')+'</div>'
+      +'<div class="speaker-profile-talk"><span>TAJUK WACANA</span><p>'+esc(s.title)+'</p></div>'
+      +'<div class="speaker-profile-footer"><span>PROFIL PENCERAMAH</span><button class="details-button" type="button" data-open-session="'+i+'" aria-label="Lihat profil '+esc(s.speaker)+'">↗</button></div>'
+      +'</div></article>';
+  }).join('');
 
   // Session modal — z-index higher than header; independent scroll; always reachable close.
   const modal = $('#sessionModal'), modalDialog = $('.modal-dialog', modal);
