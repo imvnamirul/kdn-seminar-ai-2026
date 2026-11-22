@@ -29,7 +29,6 @@ sebelumnya bertarikh Khamis, **26 November 2026**. Website ini menggunakan tarik
 - `sessions`: tiga kad sesi (nama, profil, foto, topik dan tag)
 - `resources`: PDF, bahan atau link
 - `contacts`: nama dan emel urus setia
-- `faq`: soalan lazim
 - `registration.enabled`: `false` sehingga link pendaftaran disahkan untuk acara ini
 
 ### Contoh menambah PDF
@@ -49,11 +48,9 @@ Letakkan `assets/penceramah-1.jpg` dan pada sesi 1 isi
 Butang anak panah pada kad akan membuka popup. Popup boleh ditutup dengan `×`,
 klik latar gelap atau kekunci Escape. Tiada top bar yang menghalang popup.
 
-### Tempat seminar
+### Tempat seminar dan kemudahan
 
-Secara default, laman menunjukkan **Lokasi akan dimaklumkan**, supaya tiada
-maklumat tempat palsu. Isi venue dan pautan Google Maps pada `data.js` untuk
-mengaktifkan butang peta.
+Lokasi seminar: **Silk Hall, Level 1, Zenith Hotel Putrajaya**. Kad lokasi turut memaparkan **The Dining Room (Level LG)** dan **Surau (Level 1)**, menggunakan gambar rujukan. Tiada kad Masjid Putra. Semua gambar boleh dibuka dalam paparan penuh.
 
 ### Pendaftaran
 
@@ -83,7 +80,7 @@ README.md                 Manual ini
 - Jadual acara dengan dua filter dan cetakan atur cara
 - Tiga kad sesi dengan modal profil yang scroll sendiri
 - Senarai bahan dengan tapisan, carian, pembuka PDF / link
-- FAQ yang boleh buka/tutup, emel urus setia, link telefon dan peta pilihan
+- Kad lokasi bergambar, jadual Waktu Solat (23 November 2026, JAKIM WLY01), emel urus setia, link telefon dan peta
 - Responsive + support reduced motion + keyboard navigation
 - Tanpa font/script CDN, jadi boleh berjalan daripada fail tempatan
 
