@@ -2075,7 +2075,9 @@ img{max-width:100%;display:block}
 }
 .sessions-section .speaker-role-line{
   display:block;
-  white-space:nowrap;
+  white-space:normal;
+  overflow-wrap:break-word;
+  text-wrap:pretty;
 }
 .sessions-section .speaker-role-line + .speaker-role-line{
   margin-top:2px;
