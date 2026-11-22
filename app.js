@@ -51,7 +51,7 @@
     const items = filter === 'sesi' ? agenda.filter(a => a.type === 'sesi') : agenda;
     $('#agendaList').innerHTML = items.map(a => `<article class="agenda-item ${a.type === 'sesi' ? 'is-sesi' : ''}">
       <div class="agenda-time">${esc(h12(a.time))}<small>${esc(meridiem(a.time))}</small></div>
-      <div class="agenda-main"><span class="agenda-kicker">${esc(a.kicker || '')}${a.end && a.end!==a.time ? ` &nbsp; / &nbsp; ${esc(h12(a.time))} – ${esc(h12(a.end))}` : ''}</span><h3>${esc(a.title)}</h3>${a.description?`<p>${esc(a.description)}</p>`:''}${a.speaker?`<span class="agenda-speaker">${esc(a.speaker)}</span>`:''}</div><span class="agenda-arrow" aria-hidden="true">↗</span>
+      <div class="agenda-main"><span class="agenda-kicker">${esc(a.kicker || '')}${a.end && a.end!==a.time ? ` &nbsp; / &nbsp; ${esc(h12(a.time))} – ${esc(h12(a.end))}` : ''}</span><h3>${esc(a.title)}</h3>${a.description?`<p>${esc(a.description)}</p>`:''}${a.speaker?`<span class="agenda-speaker">${esc(a.speaker)}</span>${a.role?`<span class="agenda-role">${esc(a.role)}</span>`:''}`:''}</div><span class="agenda-arrow" aria-hidden="true">↗</span>
     </article>`).join('') || '<p class="resource-empty">Tiada atur cara untuk dipaparkan.</p>';
   }
   renderAgenda();
@@ -59,13 +59,6 @@
     $$('[data-agenda-filter]').forEach(b => { const active = b === btn; b.classList.toggle('active',active); b.setAttribute('aria-pressed',String(active)); });
     renderAgenda(btn.dataset.agendaFilter);
   }));
-  $('#printAgenda').addEventListener('click', () => {
-    const oldFilter = $('[data-agenda-filter].active')?.dataset.agendaFilter || 'semua';
-    renderAgenda('semua'); document.body.classList.add('print-agenda');
-    const restore = () => { document.body.classList.remove('print-agenda'); renderAgenda(oldFilter); window.removeEventListener('afterprint', restore); };
-    window.addEventListener('afterprint', restore);
-    window.print();
-  });
 
   // Original vector illustrations for the three session cards.
   const shapes = [
